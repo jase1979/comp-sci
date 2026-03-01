@@ -29,35 +29,54 @@ The **Central Processing Unit (CPU)** is the main processor in a computer. It ca
 
 Most modern computers are based on the **Von Neumann architecture**, proposed by John von Neumann in 1945. Its key principle is that **data and instructions are stored together in the same memory** and are accessed using the same bus system.
 
-<div class="diagram">
-┌─────────────────────────────────────────────┐
-│                    CPU                       │
-│  ┌───────────┐  ┌──────────────────────┐    │
-│  │  Control   │  │         ALU          │    │
-│  │   Unit     │  │  (Arithmetic Logic   │    │
-│  │   (CU)     │  │       Unit)          │    │
-│  └─────┬─────┘  └──────────┬───────────┘    │
-│        │                    │                │
-│  ┌─────┴────────────────────┴───────────┐   │
-│  │           Registers                   │   │
-│  │  ┌─────┐ ┌─────┐ ┌─────┐ ┌────────┐ │   │
-│  │  │ PC  │ │ MAR │ │ MDR │ │  ACC   │ │   │
-│  │  └─────┘ └─────┘ └─────┘ └────────┘ │   │
-│  └──────────────────────────────────────┘   │
-└──────────────────┬──────────────────────────┘
-                   │
-            ┌──────┴──────┐
-            │  System Bus  │
-            │ (Address,    │
-            │  Data,       │
-            │  Control)    │
-            └──────┬──────┘
-                   │
-          ┌────────┴────────┐
-          │   Main Memory   │
-          │   (RAM / ROM)   │
-          └─────────────────┘
-</div>
+<svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;height:auto;display:block;margin:1.2rem auto;">
+  <style>
+    .box { fill: #1a1d27; stroke: #6c8aff; stroke-width: 1.5; rx: 8; }
+    .box-outer { fill: none; stroke: #2d3148; stroke-width: 1.5; rx: 10; }
+    .label { fill: #e1e4ed; font-family: -apple-system, sans-serif; text-anchor: middle; }
+    .label-sm { fill: #8b90a5; font-family: -apple-system, sans-serif; font-size: 11px; text-anchor: middle; }
+    .label-accent { fill: #6c8aff; font-family: -apple-system, sans-serif; font-size: 12px; text-anchor: middle; font-weight: 600; }
+    .connector { stroke: #6c8aff; stroke-width: 1.5; fill: none; }
+  </style>
+  <!-- CPU outer box -->
+  <rect class="box-outer" x="30" y="10" width="460" height="230"/>
+  <text class="label" x="260" y="35" font-size="15" font-weight="700">CPU</text>
+  <!-- Control Unit -->
+  <rect class="box" x="55" y="50" width="150" height="60"/>
+  <text class="label" x="130" y="76" font-size="13" font-weight="600">Control Unit</text>
+  <text class="label-sm" x="130" y="96">(CU)</text>
+  <!-- ALU -->
+  <rect class="box" x="235" y="50" width="230" height="60"/>
+  <text class="label" x="350" y="76" font-size="13" font-weight="600">Arithmetic Logic Unit</text>
+  <text class="label-sm" x="350" y="96">(ALU)</text>
+  <!-- Connectors CU/ALU to Registers -->
+  <line class="connector" x1="130" y1="110" x2="130" y2="145"/>
+  <line class="connector" x1="350" y1="110" x2="350" y2="145"/>
+  <!-- Registers outer -->
+  <rect class="box" x="55" y="145" width="410" height="75"/>
+  <text class="label-sm" x="260" y="165">Registers</text>
+  <!-- Individual registers -->
+  <rect x="75" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
+  <text class="label-accent" x="105" y="195">PC</text>
+  <rect x="155" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
+  <text class="label-accent" x="185" y="195">MAR</text>
+  <rect x="235" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
+  <text class="label-accent" x="265" y="195">MDR</text>
+  <rect x="315" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
+  <text class="label-accent" x="345" y="195">ACC</text>
+  <rect x="395" y="175" width="55" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
+  <text class="label-accent" x="422" y="195">CIR</text>
+  <!-- System Bus -->
+  <line class="connector" x1="260" y1="240" x2="260" y2="280"/>
+  <rect class="box" x="165" y="280" width="190" height="55"/>
+  <text class="label" x="260" y="303" font-size="13" font-weight="600">System Bus</text>
+  <text class="label-sm" x="260" y="322">Address / Data / Control</text>
+  <!-- Main Memory -->
+  <line class="connector" x1="260" y1="335" x2="260" y2="360"/>
+  <rect class="box" x="165" y="360" width="190" height="48"/>
+  <text class="label" x="260" y="381" font-size="13" font-weight="600">Main Memory</text>
+  <text class="label-sm" x="260" y="398">RAM / ROM</text>
+</svg>
 
 #### Key components
 
