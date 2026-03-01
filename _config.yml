@@ -1,0 +1,19 @@
+title: WJEC Computer Science Revision
+description: GCSE and A Level Computer Science topic guide
+baseurl: "/comp-sci"
+url: ""
+theme: null
+remote_theme: null
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

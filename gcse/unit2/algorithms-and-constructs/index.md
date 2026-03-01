@@ -1,0 +1,26 @@
+---
+layout: topic
+title: "Algorithms & Programming Constructs"
+level: "GCSE"
+level_url: "/gcse/"
+unit_name: "Unit 2: Computational Thinking & Programming"
+unit_url: "/gcse/unit2/"
+subtopics:
+  - "Algorithms: Pseudo-code and flowcharts"
+  - "Sub routines in algorithms and programs"
+  - "Sequence, selection and iteration"
+  - "Counts and rogue values"
+  - "Constructs in object oriented programs"
+  - "Follow and alter algorithms using sequence, selection, iteration"
+  - "Follow and alter algorithms using input, processing, output"
+  - "Write algorithms solving problems with sequence, selection, iteration"
+  - "Local and global variables"
+  - "Self-documenting identifiers and annotation"
+  - "String handling routines"
+  - "Mathematical operations in algorithms"
+  - "Logical operators: AND, OR, NOT, XOR in programs"
+  - "Sorting: Merge sort and bubble sort characteristics"
+  - "Searching: Linear and binary search algorithms"
+  - "Testing: Explain how algorithm/program works"
+  - "Evaluate efficiency using logical reasoning and test data"
+---
