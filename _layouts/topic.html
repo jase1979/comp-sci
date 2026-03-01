@@ -17,20 +17,21 @@ layout: default
     <p>{{ page.level }} — {{ page.unit_name }}</p>
   </div>
 
-  {% if page.subtopics %}
-  <h2>Checklist</h2>
-  <ul class="checklist">
-    {% for item in page.subtopics %}
-    <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-
   {% assign stripped = content | strip %}
   {% if stripped == "" %}
+  {% if page.subtopics %}
+  <nav class="section-nav">
+    <h2>Sections</h2>
+    <ol>
+      {% for item in page.subtopics %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
   <div class="content-placeholder">
     <h2>Content Coming Soon</h2>
-    <p>This topic page is a placeholder. Detailed revision notes will be added here.</p>
+    <p>Detailed revision notes for each section above will be added here.</p>
   </div>
   {% else %}
   <div class="topic-content">

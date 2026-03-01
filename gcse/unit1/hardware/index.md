@@ -5,29 +5,24 @@ level: "GCSE"
 level_url: "/gcse/"
 unit_name: "Unit 1: Understanding Computer Science"
 unit_url: "/gcse/unit1/"
-subtopics:
-  - "Architecture: CPU characteristics including Von Neumann"
-  - "Components of CPU in fetch-decode-execute cycle"
-  - "Performance factors: Cache size, clock speed, number of cores"
-  - "Difference between RISC and CISC processors"
-  - "Input/output: Use and characteristics of I/O devices"
-  - "Primary storage: RAM, ROM, flash memory, cache memory"
-  - "Secondary storage: Magnetic, optical and solid state technologies"
-  - "Functional characteristics: Suitability, durability, portability, speed"
-  - "Storage requirements: Bit, nybble, byte, kilobyte, prefix multipliers"
-  - "Data capacity and calculating data capacity requirements"
-  - "Other hardware: GPU, sound cards, motherboards"
-  - "Embedded systems: Use and examples"
 next_topic: "/gcse/unit1/logical-operations/"
 ---
 
-## CPU Architecture
+## Architecture: CPU characteristics including Von Neumann
 
 The **Central Processing Unit (CPU)** is the main processor in a computer. It carries out instructions from programs by performing basic arithmetic, logic, control and input/output operations.
 
-### Von Neumann Architecture
-
 Most modern computers are based on the **Von Neumann architecture**, proposed by John von Neumann in 1945. Its key principle is that **data and instructions are stored together in the same memory** and are accessed using the same bus system.
+
+<div class="key-term" markdown="1">
+**Von Neumann architecture** — a computer design where program instructions and data share the same memory and bus system. This means only one instruction or data item can be fetched at a time.
+</div>
+
+The CPU contains three main components:
+
+- **ALU (Arithmetic Logic Unit)** — performs all arithmetic calculations (add, subtract) and logical comparisons (greater than, equal to, AND, OR, NOT)
+- **Control Unit (CU)** — directs the operation of the processor. It fetches instructions from memory, decodes them, and coordinates the ALU, registers and memory to execute them
+- **Registers** — tiny, extremely fast storage locations inside the CPU used to hold data and addresses during processing
 
 <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;width:100%;height:auto;display:block;margin:1.2rem auto;">
   <style>
@@ -38,24 +33,18 @@ Most modern computers are based on the **Von Neumann architecture**, proposed by
     .label-accent { fill: #6c8aff; font-family: -apple-system, sans-serif; font-size: 12px; text-anchor: middle; font-weight: 600; }
     .connector { stroke: #6c8aff; stroke-width: 1.5; fill: none; }
   </style>
-  <!-- CPU outer box -->
   <rect class="box-outer" x="30" y="10" width="460" height="230"/>
   <text class="label" x="260" y="35" font-size="15" font-weight="700">CPU</text>
-  <!-- Control Unit -->
   <rect class="box" x="55" y="50" width="150" height="60"/>
   <text class="label" x="130" y="76" font-size="13" font-weight="600">Control Unit</text>
   <text class="label-sm" x="130" y="96">(CU)</text>
-  <!-- ALU -->
   <rect class="box" x="235" y="50" width="230" height="60"/>
   <text class="label" x="350" y="76" font-size="13" font-weight="600">Arithmetic Logic Unit</text>
   <text class="label-sm" x="350" y="96">(ALU)</text>
-  <!-- Connectors CU/ALU to Registers -->
   <line class="connector" x1="130" y1="110" x2="130" y2="145"/>
   <line class="connector" x1="350" y1="110" x2="350" y2="145"/>
-  <!-- Registers outer -->
   <rect class="box" x="55" y="145" width="410" height="75"/>
   <text class="label-sm" x="260" y="165">Registers</text>
-  <!-- Individual registers -->
   <rect x="75" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
   <text class="label-accent" x="105" y="195">PC</text>
   <rect x="155" y="175" width="60" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
@@ -66,33 +55,23 @@ Most modern computers are based on the **Von Neumann architecture**, proposed by
   <text class="label-accent" x="345" y="195">ACC</text>
   <rect x="395" y="175" width="55" height="30" rx="5" fill="#242836" stroke="#6c8aff" stroke-width="1"/>
   <text class="label-accent" x="422" y="195">CIR</text>
-  <!-- System Bus -->
   <line class="connector" x1="260" y1="240" x2="260" y2="280"/>
   <rect class="box" x="165" y="280" width="190" height="55"/>
   <text class="label" x="260" y="303" font-size="13" font-weight="600">System Bus</text>
   <text class="label-sm" x="260" y="322">Address / Data / Control</text>
-  <!-- Main Memory -->
   <line class="connector" x1="260" y1="335" x2="260" y2="360"/>
   <rect class="box" x="165" y="360" width="190" height="48"/>
   <text class="label" x="260" y="381" font-size="13" font-weight="600">Main Memory</text>
   <text class="label-sm" x="260" y="398">RAM / ROM</text>
 </svg>
 
-#### Key components
+---
 
-<div class="key-term" markdown="1">
-**ALU (Arithmetic Logic Unit)** — performs all arithmetic calculations (add, subtract) and logical comparisons (greater than, equal to, AND, OR, NOT).
-</div>
+## Components of CPU in fetch-decode-execute cycle
 
-<div class="key-term" markdown="1">
-**Control Unit (CU)** — directs the operation of the processor. It fetches instructions from memory, decodes them, and coordinates the ALU, registers and memory to execute them.
-</div>
+The CPU continuously repeats three steps to process every instruction:
 
-<div class="key-term" markdown="1">
-**Registers** — tiny, extremely fast storage locations inside the CPU used to hold data and addresses during processing.
-</div>
-
-#### Important registers
+### Registers involved
 
 | Register | Full Name | Purpose |
 |----------|-----------|---------|
@@ -102,9 +81,7 @@ Most modern computers are based on the **Von Neumann architecture**, proposed by
 | **ACC** | Accumulator | Stores the result of calculations performed by the ALU |
 | **CIR** | Current Instruction Register | Holds the instruction currently being decoded and executed |
 
-### The Fetch-Decode-Execute Cycle
-
-The CPU continuously repeats three steps to process every instruction:
+### The cycle
 
 **1. Fetch**
 - The address in the **PC** is copied to the **MAR**
@@ -126,7 +103,7 @@ You may be asked to walk through the fetch-decode-execute cycle step by step. Al
 
 ---
 
-## CPU Performance Factors
+## Performance factors: Cache size, clock speed, number of cores
 
 Three main factors affect how fast a CPU can process instructions:
 
@@ -159,7 +136,7 @@ If asked to recommend a CPU upgrade, consider the use case. Gaming benefits from
 
 ---
 
-## RISC vs CISC Processors
+## Difference between RISC and CISC processors
 
 | Feature | RISC | CISC |
 |---------|------|------|
@@ -177,7 +154,7 @@ If asked to recommend a CPU upgrade, consider the use case. Gaming benefits from
 
 ---
 
-## Input/Output Devices
+## Input/output: Use and characteristics of I/O devices
 
 **Input devices** send data into the computer. **Output devices** present data from the computer to the user.
 
@@ -204,7 +181,7 @@ If asked to recommend a CPU upgrade, consider the use case. Gaming benefits from
 
 ---
 
-## Primary Storage
+## Primary storage: RAM, ROM, flash memory, cache memory
 
 Primary storage is **directly accessible by the CPU** and holds data currently in use.
 
@@ -244,7 +221,7 @@ Primary storage is **directly accessible by the CPU** and holds data currently i
 
 ---
 
-## Secondary Storage
+## Secondary storage: Magnetic, optical and solid state technologies
 
 Secondary storage is **non-volatile** and used for long-term data storage. It is not directly accessible by the CPU — data must be loaded into RAM first.
 
@@ -266,7 +243,11 @@ Secondary storage is **non-volatile** and used for long-term data storage. It is
 - **USB flash drives**, **SD cards**
 - Very fast, durable, silent, lightweight — but more expensive per GB than HDD
 
-### Comparison
+---
+
+## Functional characteristics: Suitability, durability, portability, speed
+
+When choosing storage, consider these characteristics:
 
 | Feature | HDD | SSD | Optical | Magnetic Tape |
 |---------|-----|-----|---------|---------------|
@@ -277,11 +258,13 @@ Secondary storage is **non-volatile** and used for long-term data storage. It is
 | Portability | Low | High | High | Low |
 | Best for | Desktop storage | OS drive, laptops | Software distribution | Backups, archives |
 
+<div class="exam-tip" markdown="1">
+Questions often ask you to **recommend** a storage device for a scenario. Match the characteristics to the requirements — e.g. a photographer on location needs portability and durability (SSD or SD card), while a company archiving old records needs high capacity and low cost (magnetic tape).
+</div>
+
 ---
 
-## Storage Requirements
-
-### Units of Storage
+## Storage requirements: Bit, nybble, byte, kilobyte, prefix multipliers
 
 | Unit | Size | Equivalent |
 |------|------|------------|
@@ -296,9 +279,11 @@ Secondary storage is **non-volatile** and used for long-term data storage. It is
 
 > Note: In computing, 1 KB is sometimes treated as 1,024 bytes (using binary prefixes: KiB, MiB, GiB). The WJEC spec uses the 1,000 convention above for simplicity.
 
-### Calculating Data Capacity
+---
 
-#### Image file size
+## Data capacity and calculating data capacity requirements
+
+### Image file size
 
 ```
 File size = Width (px) × Height (px) × Colour depth (bits)
@@ -307,7 +292,7 @@ File size = Width (px) × Height (px) × Colour depth (bits)
 - **Colour depth** is the number of bits per pixel (e.g. 24-bit colour = 16.7 million colours)
 - A 1920×1080 image at 24-bit colour: `1920 × 1080 × 24 = 49,766,400 bits ≈ 5.93 MB`
 
-#### Sound file size
+### Sound file size
 
 ```
 File size = Sample rate (Hz) × Bit depth × Duration (s) × Channels
@@ -323,7 +308,7 @@ Always show your working in calculation questions. Convert your final answer to 
 
 ---
 
-## Other Hardware
+## Other hardware: GPU, sound cards, motherboards
 
 ### GPU (Graphics Processing Unit)
 
@@ -347,7 +332,7 @@ Always show your working in calculation questions. Convert your final answer to 
 
 ---
 
-## Embedded Systems
+## Embedded systems: Use and examples
 
 <div class="key-term" markdown="1">
 An **embedded system** is a computer system built into a larger device to perform a **dedicated function**. It is not a general-purpose computer — it is designed for one specific task.
