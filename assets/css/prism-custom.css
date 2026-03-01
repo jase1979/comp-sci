@@ -1,0 +1,177 @@
+/* Custom Prism theme matching site dark design */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #c9d1d9;
+  background: none;
+  font-family: 'SF Mono', 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+  font-size: 0.85rem;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.6;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  overflow: auto;
+}
+
+/* Code block wrapper */
+.code-block {
+  margin: 1.2rem 0;
+  border-radius: 10px;
+  border: 1px solid #2d3148;
+  overflow: hidden;
+  background: #13151d;
+}
+
+.code-block pre {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #13151d !important;
+  padding: 1rem 1.2rem !important;
+}
+
+.code-block pre code {
+  background: none !important;
+  padding: 0 !important;
+  color: #c9d1d9 !important;
+  font-size: 0.85rem !important;
+}
+
+/* Header bar with language label and copy button */
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background: #1c1f2e;
+  border-bottom: 1px solid #2d3148;
+}
+
+.code-lang {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6c8aff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid #3a3f5c;
+  border-radius: 5px;
+  color: #8b90a5;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #252a3a;
+  color: #e1e4ed;
+  border-color: #6c8aff;
+}
+
+.copy-btn.copied {
+  background: rgba(78, 205, 196, 0.15);
+  color: #4ecdc4;
+  border-color: #4ecdc4;
+}
+
+/* Syntax colours */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #8b90a5;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff7b72;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a5d6ff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #79c0ff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #ff7b72;
+}
+
+.token.function,
+.token.class-name {
+  color: #d2a8ff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffa657;
+}
+
+.token.string {
+  color: #a5d6ff;
+}
+
+.token.keyword {
+  color: #ff7b72;
+  font-weight: 600;
+}
+
+.token.builtin {
+  color: #79c0ff;
+}
+
+.token.function {
+  color: #d2a8ff;
+}
+
+.token.class-name {
+  color: #ffa657;
+}
+
+.token.number {
+  color: #79c0ff;
+}
+
+.token.boolean {
+  color: #ff7b72;
+}
+
+.token.operator {
+  color: #ff7b72;
+}

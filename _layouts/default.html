@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/prism-custom.css' | relative_url }}">
 </head>
 <body>
   {% include header.html %}
@@ -14,12 +15,56 @@
   <footer>
     <p>WJEC Computer Science Revision Guide</p>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-visual-basic.min.js"></script>
   <script>
+    // Wrap tables
     document.querySelectorAll('.topic-content table').forEach(function(table) {
       var wrapper = document.createElement('div');
       wrapper.className = 'table-wrap';
       table.parentNode.insertBefore(wrapper, table);
       wrapper.appendChild(table);
+    });
+
+    // Add language label + copy button to code blocks
+    document.querySelectorAll('.topic-content pre > code').forEach(function(codeEl) {
+      var pre = codeEl.parentElement;
+      var lang = '';
+      codeEl.classList.forEach(function(c) {
+        if (c.startsWith('language-')) lang = c.replace('language-', '');
+      });
+
+      var wrapper = document.createElement('div');
+      wrapper.className = 'code-block';
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      var header = document.createElement('div');
+      header.className = 'code-header';
+
+      var label = document.createElement('span');
+      label.className = 'code-lang';
+      var langNames = { python: 'Python', vb: 'VB.NET', 'visual-basic': 'VB.NET', javascript: 'JavaScript', html: 'HTML', css: 'CSS', java: 'Java' };
+      label.textContent = langNames[lang] || lang.toUpperCase() || 'Code';
+
+      var btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function() {
+        navigator.clipboard.writeText(codeEl.textContent).then(function() {
+          btn.textContent = 'Copied!';
+          btn.classList.add('copied');
+          setTimeout(function() {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+          }, 2000);
+        });
+      });
+
+      header.appendChild(label);
+      header.appendChild(btn);
+      wrapper.insertBefore(header, pre);
     });
   </script>
 </body>

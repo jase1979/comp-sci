@@ -8,6 +8,7 @@ remote_theme: null
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: none
 permalink: pretty
 
 defaults:
