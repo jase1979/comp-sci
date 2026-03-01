@@ -145,6 +145,102 @@ A left shift by *n* positions multiplies by **2ⁿ**. A right shift by *n* posit
 
 ---
 
+## Signed binary: Sign and magnitude and two's complement
+
+So far, the binary numbers covered have been **unsigned** — they can only represent positive values. To represent **negative** numbers, we use one of two systems.
+
+### Sign and magnitude
+
+- The **most significant bit (MSB)** is used as a **sign bit**: **0 = positive**, **1 = negative**
+- The remaining bits represent the **magnitude** (absolute value) of the number
+- In an 8-bit number, 7 bits hold the value and 1 bit holds the sign
+
+**Example (8-bit):**
+
+| Binary | Sign bit | Magnitude bits | Denary value |
+|--------|----------|---------------|--------------|
+| `00001101` | 0 (positive) | 0001101 = 13 | +13 |
+| `10001101` | 1 (negative) | 0001101 = 13 | -13 |
+
+**Problem with sign and magnitude:** There are **two representations of zero** (`00000000` = +0 and `10000000` = -0), and binary arithmetic does not work correctly without special handling.
+
+### Two's complement
+
+Two's complement is the system actually used by computers to represent signed integers. It avoids the problems of sign and magnitude.
+
+**Key idea:** The MSB has a **negative place value**. In an 8-bit two's complement number, the column values are:
+
+| -128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|------|----|----|----|----|---|---|---|
+
+#### Converting denary to two's complement
+
+**Method (for negative numbers):**
+
+1. Write the positive version of the number in binary
+2. **Flip** (invert) all the bits (0 becomes 1, 1 becomes 0)
+3. **Add 1** to the result
+
+**Example:** Convert **-35** to 8-bit two's complement:
+
+1. +35 in binary: `00100011`
+2. Flip all bits: `11011100`
+3. Add 1: `11011101`
+
+So **-35** in two's complement is `11011101`.
+
+#### Converting two's complement to denary
+
+**Method:** Use the column values, remembering the MSB column is **negative**.
+
+**Example:** Convert `11011101` to denary:
+
+-128 + 64 + 0 + 16 + 8 + 4 + 0 + 1 = **-35**
+
+#### Another worked example
+
+**Convert -100 to 8-bit two's complement:**
+
+1. +100 in binary: `01100100`
+2. Flip all bits: `10011011`
+3. Add 1: `10011100`
+
+**Check:** -128 + 0 + 0 + 16 + 8 + 4 + 0 + 0 = **-100** ✓
+
+### Range of values
+
+For an **n-bit** two's complement number, the range of values is:
+
+```
+Minimum: -2^(n-1)
+Maximum:  2^(n-1) - 1
+```
+
+| Bits | Minimum | Maximum |
+|------|---------|---------|
+| 4 | -8 | +7 |
+| 8 | -128 | +127 |
+| 16 | -32,768 | +32,767 |
+
+### Why two's complement is preferred
+
+| Feature | Sign and magnitude | Two's complement |
+|---------|--------------------|------------------|
+| Representations of zero | Two (+0 and -0) | One (only 0) |
+| Binary addition | Requires special rules | Works normally with standard addition |
+| Range (8-bit) | -127 to +127 | -128 to +127 |
+| Used in hardware | Rarely | Yes — used by all modern processors |
+
+<div class="key-term" markdown="1">
+**Sign and magnitude** — a method of representing signed binary where the MSB indicates the sign (0 = positive, 1 = negative) and the remaining bits represent the value. **Two's complement** — the standard method used by computers to represent signed integers; negative numbers are formed by flipping all bits and adding 1.
+</div>
+
+<div class="exam-tip" markdown="1">
+To check your two's complement conversion, convert the result back to denary using the negative MSB column value. If you apply the "flip and add 1" process **twice**, you get back to the original number — this works in both directions.
+</div>
+
+---
+
 ## Binary addition techniques
 
 Binary addition follows the same principles as denary addition, but with only two digits (0 and 1).
@@ -260,6 +356,51 @@ File size (bits) = Width (px) x Height (px) x Colour depth (bits)
 
 <div class="exam-tip" markdown="1">
 In calculation questions, always state the formula first, substitute your values, then convert the answer into appropriate units (bits to bytes: divide by 8; bytes to KB: divide by 1,000). Show every step of your working.
+</div>
+
+### Bitmap graphics
+
+A **bitmap** (also called a raster image) stores an image as a **grid of pixels**. Each pixel holds a binary value representing its colour.
+
+- The file stores colour data for **every individual pixel** in the image
+- File size is directly determined by the number of pixels and the colour depth
+- Common bitmap formats: BMP, PNG, JPEG, GIF
+
+**Metadata stored with a bitmap file:**
+- Image width and height (in pixels)
+- Colour depth (bits per pixel)
+- File format and compression type
+
+### Vector graphics
+
+A **vector** image stores an image as a collection of **mathematical objects** (lines, shapes, curves) defined by their properties.
+
+- Each object is described by properties such as **coordinates, length, radius, fill colour, stroke colour, stroke width, and layer order**
+- The file stores **instructions** for drawing the image, not individual pixels
+- Common vector formats: SVG, AI, EPS, WMF
+
+**Metadata stored with a vector file:**
+- Canvas dimensions
+- List of objects and their mathematical properties
+- Layer and grouping information
+
+### Bitmap vs vector comparison
+
+| Feature | Bitmap | Vector |
+|---------|--------|--------|
+| **Made of** | Pixels (dots) | Mathematical objects (lines, shapes, curves) |
+| **Scalability** | Loses quality when enlarged (pixelation) | Scales to any size without losing quality |
+| **File size** | Depends on resolution and colour depth; can be very large | Generally smaller for simple images; size depends on number of objects |
+| **Editing** | Edit individual pixels; hard to select and move objects | Edit individual objects (move, resize, recolour) easily |
+| **Best for** | Photographs, complex images with subtle colour gradients | Logos, diagrams, icons, text, illustrations |
+| **Example formats** | BMP, PNG, JPEG, GIF | SVG, AI, EPS |
+
+<div class="key-term" markdown="1">
+**Bitmap (raster) image** — an image made up of a grid of pixels, where each pixel stores colour data. **Vector image** — an image made up of mathematical objects defined by properties such as coordinates, fill, and stroke, allowing it to be scaled without loss of quality.
+</div>
+
+<div class="exam-tip" markdown="1">
+A common exam question asks you to explain why a company logo should be stored as a vector rather than a bitmap. The key points are: logos must be **scaled** to many sizes (business cards to billboards) without losing quality, and vector files are typically **smaller** for simple shapes. Bitmaps would pixelate when enlarged.
 </div>
 
 ---
@@ -531,6 +672,47 @@ Validation checks that data is **reasonable, sensible, and within acceptable lim
 | **Format check** | Data matches a required pattern | Date must be DD/MM/YYYY |
 | **Lookup check** | Data matches an entry in a predefined list | Title must be Mr, Mrs, Miss, Ms, Dr |
 | **Check digit** | A calculated digit added to a number to detect errors | Last digit of a barcode ISBN |
+
+#### Lookup table validation
+
+A **lookup check** (or lookup table) compares the entered data against a **predefined list of acceptable values**. If the input is not in the list, it is rejected.
+
+- Often implemented as a **dropdown menu**, combo box, or list box so the user can only choose from valid options
+- Can also be implemented in code by checking input against an array of allowed values
+- Prevents typing errors because the user selects rather than types
+
+**Example:** A "Country" field could use a lookup table containing all valid country names. The user selects from the list, ensuring only a recognised country can be entered.
+
+```
+validTitles = ["Mr", "Mrs", "Miss", "Ms", "Dr"]
+
+OUTPUT "Select a title: "
+INPUT title
+
+IF title NOT IN validTitles THEN
+    OUTPUT "Invalid title. Please choose from the list."
+END IF
+```
+
+#### Check digit verification
+
+A **check digit** is an extra digit appended to a number, calculated from the other digits using a specific **algorithm**. It is used to detect errors in data entry or transmission.
+
+- Used on **barcodes** (EAN), **ISBN numbers** (books), credit card numbers, and other numeric codes
+- The receiving system recalculates the check digit from the other digits and compares it to the one supplied
+- If they do not match, an **error is detected** — the number has been entered or transmitted incorrectly
+- Check digits can detect common errors such as a single wrong digit or two adjacent digits being swapped
+
+**Example — ISBN-13 check digit:**
+
+1. Multiply each of the first 12 digits alternately by 1 and 3
+2. Add all the results together
+3. Divide by 10 and find the remainder
+4. Subtract the remainder from 10 to get the check digit (if the result is 10, the check digit is 0)
+
+<div class="key-term" markdown="1">
+**Lookup table** — a validation technique that compares input against a predefined list of acceptable values, often presented as a dropdown menu. **Check digit** — an extra digit calculated from other digits using an algorithm, appended to a code (such as a barcode or ISBN) to detect data entry or transmission errors.
+</div>
 
 ### Verification
 

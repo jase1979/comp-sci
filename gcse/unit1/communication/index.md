@@ -35,8 +35,43 @@ A **computer network** is two or more devices connected together so they can com
 | Cost | Lower setup and running costs | Higher (leasing lines) |
 | Example | School network | The internet |
 
+### PAN (Personal Area Network)
+
+- Covers a **very small area** — typically within a few metres of an individual
+- Used to connect **personal devices** such as smartphones, tablets, headphones, and smartwatches
+- Often uses **Bluetooth** or **USB** connections
+- Low power consumption and short range
+- Example: connecting wireless earbuds to a phone
+
+### MAN (Metropolitan Area Network)
+
+- Covers a **city-wide area** — larger than a LAN but smaller than a WAN
+- Connects **multiple LANs** across a town or city
+- Often managed by a single organisation or local authority
+- Uses high-speed connections such as **fibre optic cables**
+- Example: a city council linking all its offices and libraries across the city
+
+### VPN (Virtual Private Network)
+
+- Creates a **secure, encrypted tunnel** over a **public network** (such as the internet)
+- Allows users to send and receive data as if they were directly connected to a private network
+- Commonly used for **remote working** — employees can securely access company resources from home
+- Also used for **privacy** — hides the user's IP address and encrypts all traffic
+- Data is **encrypted before transmission** and **decrypted at the other end**
+
+| Feature | PAN | LAN | MAN | WAN | VPN |
+|---------|-----|-----|-----|-----|-----|
+| Geographical area | Very small (a few metres) | Small (one site) | City-wide | Large (multiple sites) | Virtual — uses existing networks |
+| Typical technology | Bluetooth, USB | Ethernet, Wi-Fi | Fibre optic | Leased lines, satellite | Encrypted tunnel over internet |
+| Ownership | Individual | Organisation | Organisation or local authority | Third-party infrastructure | Organisation (software-based) |
+| Example | Phone to earbuds | School network | City council network | The internet | Employee working from home |
+
 <div class="key-term" markdown="1">
-**LAN** — a network confined to a small area, owned and managed by one organisation. **WAN** — a network spanning a large area, often using infrastructure from telecommunications providers.
+**LAN** — a network confined to a small area, owned and managed by one organisation. **WAN** — a network spanning a large area, often using infrastructure from telecommunications providers. **PAN** — a very small network connecting personal devices, typically using Bluetooth. **MAN** — a network spanning a city, connecting multiple LANs. **VPN** — a secure, encrypted connection over a public network that allows private data to be sent safely.
+</div>
+
+<div class="exam-tip" markdown="1">
+Do not confuse a VPN with a physical network type. A VPN is a **virtual** network — it does not require its own cables or infrastructure. It works by creating an encrypted tunnel over an existing network such as the internet.
 </div>
 
 ### Why networks are important
@@ -99,6 +134,76 @@ Every device is connected to **every other device** (full mesh) or to **several 
 
 <div class="exam-tip" markdown="1">
 When asked to recommend a topology, consider the scenario. A small office might use **star** (reliable, easy to manage). A network requiring maximum uptime uses **mesh**. Always justify your choice by linking advantages to the scenario's requirements.
+</div>
+
+---
+
+## Network hardware: Hub, switch, router, bridge, WAP, NIC
+
+Networks require specialised **hardware devices** to connect computers and manage the flow of data. Each device has a specific role.
+
+### Hub
+
+- Connects multiple devices in a network
+- When it receives data, it **broadcasts** the data to **all ports** (every connected device)
+- Does **not** read or filter data — every device receives every message
+- Creates unnecessary network traffic and is **inefficient**
+- Considered **outdated** — largely replaced by switches
+
+### Switch
+
+- Connects multiple devices in a network, like a hub, but is **intelligent**
+- Reads the **MAC address** of incoming data and sends it **only to the intended recipient**
+- Reduces unnecessary traffic and improves network performance
+- Operates at the **Data Link layer** (Layer 2) of the TCP/IP model
+- The standard device used in modern **star topology** networks
+
+### Router
+
+- Directs data **between different networks** (e.g. from a LAN to the internet)
+- Reads the **destination IP address** of each packet and determines the best route
+- Uses a **routing table** to make forwarding decisions
+- Operates at the **Network layer** (Layer 3) of the TCP/IP model
+- Essential for connecting a home or office network to the internet
+
+### Bridge
+
+- Connects **two network segments** and allows them to function as a single network
+- Filters traffic by reading **MAC addresses**, only forwarding data that needs to cross between segments
+- Reduces network congestion by keeping local traffic within its segment
+- Simpler and less capable than a switch
+
+### WAP (Wireless Access Point)
+
+- Allows **wireless devices** to connect to a **wired network**
+- Acts as a bridge between Wi-Fi devices and the wired LAN
+- Broadcasts a **wireless signal** (SSID) that devices can connect to
+- Often built into home routers, but can also be standalone devices in larger networks
+- Uses encryption (WPA2/WPA3) to secure wireless connections
+
+### NIC (Network Interface Card)
+
+- A piece of **hardware** installed in a device that allows it to connect to a network
+- Each NIC has a unique **MAC address** burned into it by the manufacturer
+- Can be **wired** (Ethernet port) or **wireless** (Wi-Fi adapter)
+- Without a NIC, a device **cannot** communicate on a network
+- Modern devices (laptops, phones) have NICs built in
+
+| Device | Function | Addresses Used | Key Characteristic |
+|--------|----------|----------------|-------------------|
+| **Hub** | Connects devices; broadcasts data to all ports | None | Outdated; inefficient |
+| **Switch** | Connects devices; sends data only to the intended recipient | MAC addresses | Intelligent; reduces traffic |
+| **Router** | Directs traffic between different networks | IP addresses | Finds best route for packets |
+| **Bridge** | Connects two network segments | MAC addresses | Filters traffic between segments |
+| **WAP** | Connects wireless devices to a wired network | MAC addresses | Broadcasts wireless signal |
+| **NIC** | Allows a device to connect to a network | Has a unique MAC address | Required hardware for networking |
+
+<div class="key-term" markdown="1">
+**Hub** — broadcasts data to all connected devices. **Switch** — sends data only to the intended device using MAC addresses. **Router** — directs packets between networks using IP addresses. **Bridge** — connects two network segments. **WAP** — allows wireless devices to join a wired network. **NIC** — hardware in a device that enables network connectivity, identified by a unique MAC address.
+</div>
+
+<div class="exam-tip" markdown="1">
+The most common confusion is between a **hub** and a **switch**. A hub broadcasts to all devices (wasteful), while a switch reads the MAC address and forwards data only to the correct device (efficient). Also remember: **switches** use MAC addresses (Layer 2) and **routers** use IP addresses (Layer 3).
 </div>
 
 ---

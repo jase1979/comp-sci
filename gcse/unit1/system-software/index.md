@@ -117,6 +117,8 @@ If asked to compare a GUI and CLI, always discuss **ease of use** (GUI is easier
 | **File compression** | Reduces file size | Uses algorithms to reduce the number of bits needed to store a file, saving space and speeding up transfers |
 | **Encryption software** | Protects data security | Scrambles data using an algorithm and a key so it cannot be read without the correct decryption key |
 | **File manager** | Organises files and folders | Allows users to browse, move, copy, rename and delete files within the file system |
+| **Firewall** | Prevents unauthorised network access | Monitors incoming and outgoing traffic and blocks connections that violate security rules |
+| **Disk partitioner** | Divides a drive into logical sections | Splits a physical hard drive into separate partitions, each of which can act as an independent drive |
 
 ### Antivirus Software
 
@@ -149,4 +151,32 @@ If asked to compare a GUI and CLI, always discuss **ease of use** (GUI is easier
 
 <div class="exam-tip" markdown="1">
 Know the difference between **lossy** and **lossless** compression. Lossy is suitable when a slight reduction in quality is acceptable (photos, music). Lossless is essential when the data must be perfectly preserved (text documents, program files).
+</div>
+
+### Firewall
+
+- Monitors all **incoming and outgoing network traffic** and checks it against a set of security rules
+- **Blocks unauthorised access** — prevents external users or programs from connecting to the computer without permission
+- Can be **software-based** (a program installed on the computer) or **hardware-based** (a dedicated device between the network and the internet)
+- Protects against **hackers and malicious connections** by filtering traffic based on IP addresses, port numbers and protocols
+- Works alongside antivirus software to provide a layered approach to security
+
+<div class="key-term" markdown="1">
+**Firewall** — a security utility that monitors network traffic and blocks unauthorised access based on a set of predefined rules. It acts as a barrier between a trusted internal network and untrusted external networks such as the internet.
+</div>
+
+### Disk Partitioner
+
+- Divides a single **physical hard drive** into separate **logical sections** called partitions
+- Each partition can act as a **separate drive**, with its own drive letter and file system
+- Useful for **running multiple operating systems** on the same machine (e.g. Windows on one partition, Linux on another)
+- Allows users to **separate OS files from user data**, making it easier to reinstall the operating system without losing personal files
+- Can **resize, create or delete** partitions as needed
+
+<div class="key-term" markdown="1">
+**Disk partitioner** — a utility that divides a physical storage device into separate logical sections (partitions). Each partition is treated as an independent drive by the operating system.
+</div>
+
+<div class="exam-tip" markdown="1">
+Remember that a firewall does **not** remove viruses — it prevents unauthorised access. Antivirus software handles detection and removal of malware. They serve different but complementary roles in system security.
 </div>
