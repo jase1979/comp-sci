@@ -26,10 +26,17 @@ layout: default
   </ul>
   {% endif %}
 
+  {% assign stripped = content | strip %}
+  {% if stripped == "" %}
   <div class="content-placeholder">
     <h2>Content Coming Soon</h2>
     <p>This topic page is a placeholder. Detailed revision notes will be added here.</p>
   </div>
+  {% else %}
+  <div class="topic-content">
+    {{ content }}
+  </div>
+  {% endif %}
 
   <div class="nav-links">
     {% if page.prev_topic %}

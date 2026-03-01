@@ -6,11 +6,9 @@ theme: null
 remote_theme: null
 
 markdown: kramdown
+kramdown:
+  input: GFM
 permalink: pretty
-
-collections:
-  pages:
-    output: true
 
 defaults:
   - scope:
