@@ -38,6 +38,81 @@ Ethical questions in exams rarely have a single "correct" answer. You are expect
 
 ---
 
+## The Digital Divide
+
+<div class="key-term" markdown="1">
+**The digital divide** — the gap between those who have access to modern technology and the internet and those who do not. It creates inequality in education, employment, and access to services.
+</div>
+
+### Types of Digital Divide
+
+| Type | Description |
+|------|-------------|
+| **Economic divide** | Poorer individuals and families cannot afford devices, broadband, or mobile data |
+| **Geographic divide** | Rural and remote areas may lack broadband infrastructure |
+| **Generational divide** | Older people may lack digital skills or confidence |
+| **Skills/education divide** | Some people have not had the opportunity to learn digital skills |
+| **Disability divide** | Not all technology is designed to be accessible to people with disabilities |
+
+### Consequences
+
+- People without digital access are excluded from **online services** — banking, healthcare, government services, job applications, and education
+- The divide **reinforces existing inequalities** — those who are already disadvantaged fall further behind
+- During the **COVID-19 pandemic**, the divide became more visible as those without internet access could not participate in remote learning or working from home
+
+### Bridging the Divide
+
+- Government investment in **broadband infrastructure** for underserved areas
+- **Free or subsidised** devices and internet access for low-income households
+- **Digital skills training** in schools, libraries, and community centres
+- Designing technology to be **accessible** to all users
+
+---
+
+## AI, Automation and Ethical Concerns
+
+### Job Displacement
+
+- Automation and AI may replace many jobs in **manufacturing** (robots), **transport** (self-driving vehicles), **retail** (self-checkouts), and **customer service** (chatbots)
+- New jobs are created in **software development**, **data science**, **cybersecurity**, and **AI research** — but these require retraining
+
+### Bias in AI
+
+- AI systems learn from **training data** — if that data contains biases, the AI will reproduce them
+- Examples: facial recognition systems with **higher error rates for certain ethnicities**, hiring algorithms that **discriminate by gender**, credit scoring that **disadvantages certain groups**
+- This raises serious concerns about **fairness and discrimination**
+
+### Accountability
+
+- If an **autonomous vehicle** causes an accident, who is responsible — the manufacturer, the programmer, or the owner?
+- If an AI makes a **wrong medical diagnosis**, who is liable?
+- The **"black box" problem** — many AI systems cannot explain how they reached a decision, making it difficult to hold anyone accountable
+
+<div class="exam-tip" markdown="1">
+When discussing AI ethics, consider **both benefits and risks**. AI can improve healthcare, reduce human error, and increase efficiency — but it also raises concerns about bias, accountability, and job losses. Always give specific examples.
+</div>
+
+---
+
+## Censorship and Freedom of Speech
+
+- **Governments** in some countries censor the internet, blocking access to certain websites, social media, and news sources
+- **Social media platforms** moderate content by removing posts that violate their policies (hate speech, misinformation, violent content)
+- **Misinformation** — false or misleading information spreads rapidly online, and there is debate about who should be responsible for stopping it
+- The balance between **preventing harm** and **protecting free speech** is a key ethical challenge — over-censorship can suppress legitimate views, while under-moderation can allow harmful content to spread
+
+---
+
+## Social Media and Mental Health
+
+- Social media platforms use **addictive design** features (infinite scrolling, notifications, likes) to keep users engaged
+- Studies link heavy social media use to increased **anxiety, depression, and loneliness**, particularly among young people
+- **Cyberbullying** — social media provides a platform for harassment that can follow victims everywhere
+- **FOMO (Fear of Missing Out)** — seeing other people's curated posts can create unrealistic comparisons
+- **Echo chambers** — algorithms show users content that reinforces their existing views, reducing exposure to different perspectives
+
+---
+
 ## Professional standards: Formal and informal codes of behaviour
 
 People who work in the computing industry are expected to follow standards of professional behaviour, just like doctors or lawyers.
@@ -107,9 +182,22 @@ Key principles — personal data must be:
 | **Storage limitation** | Data must not be kept longer than necessary |
 | **Integrity and confidentiality** | Data must be kept secure |
 
-**Data subject rights** include: the right to access their data, the right to have inaccurate data corrected, and the right to have data deleted.
+The **7th principle** is **accountability** — the organisation must be able to demonstrate compliance with all the other principles.
 
-The **Information Commissioner's Office (ICO)** enforces this law and can issue fines to organisations that breach it.
+**Data subject rights** — individuals have 8 rights under the DPA/GDPR:
+
+| Right | Description |
+|-------|-------------|
+| **Right to be informed** | Told how their data is being used |
+| **Right of access** | Request a copy of the data held about them |
+| **Right to rectification** | Have inaccurate data corrected |
+| **Right to erasure** | Have their data deleted ("right to be forgotten") |
+| **Right to restrict processing** | Request that their data is stored but not processed |
+| **Right to data portability** | Receive their data in a format that can be transferred to another service |
+| **Right to object** | Object to their data being used for certain purposes (e.g. direct marketing) |
+| **Right relating to automated decision-making** | Not be subject to decisions made solely by automated processing (including profiling) without human involvement |
+
+**Penalties**: Organisations that breach the DPA/GDPR can be fined up to **£17.5 million** or **4% of annual global turnover** (whichever is greater). The **Information Commissioner's Office (ICO)** enforces this law.
 
 ### Freedom of Information Act 2000
 
@@ -123,6 +211,31 @@ The **Information Commissioner's Office (ICO)** enforces this law and can issue 
 - It is illegal to **copy, distribute, or modify** copyrighted work without permission
 - Software piracy (copying and distributing software without a licence) is a criminal offence
 - Protects the rights of software developers to profit from their work
+
+### Regulation of Investigatory Powers Act 2000 (RIPA)
+
+- Gives certain public bodies (police, intelligence services) the legal power to carry out **surveillance** and **intercept communications** (phone calls, emails, internet activity)
+- Internet Service Providers (ISPs) can be required to give access to a customer's communications data
+- Intended for **national security**, preventing crime, and protecting public safety
+- Controversial because it **balances security against privacy** — critics argue it enables mass surveillance
+
+### Communications Act 2003
+
+- Makes it an offence to send **malicious, indecent, or threatening messages** via electronic communications (email, social media, messaging apps)
+- Covers **cyberbullying**, online harassment, and sending offensive messages
+- Also regulates telecommunications services and broadcasting
+
+### Equality Act 2010
+
+- Requires organisations to ensure their digital services are **accessible** to people with disabilities
+- Websites and apps should be usable with **screen readers, keyboard navigation**, and other assistive technologies
+- Important for ensuring technology does not exclude people
+
+### Consumer Rights Act 2015
+
+- Gives consumers rights when purchasing **digital content** (software, apps, games, music, films)
+- Digital content must be of **satisfactory quality**, **fit for purpose**, and **as described**
+- Consumers can request a **repair, replacement, or refund** if digital content is faulty
 
 <div class="key-term" markdown="1">
 **Data Protection Act 2018** — the main UK law governing how personal data must be handled. It gives individuals rights over their data and imposes obligations on organisations that process it. **Computer Misuse Act 1990** — the law that makes hacking and unauthorised access to computer systems a criminal offence.

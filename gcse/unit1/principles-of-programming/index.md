@@ -127,3 +127,98 @@ When deciding which type of language to use, consider these questions:
 <div class="key-term" markdown="1">
 **Portability** — the ability of source code to be run on different types of hardware or operating systems without modification. High-level languages are portable; low-level languages are not.
 </div>
+
+---
+
+## Little Man Computer (LMC)
+
+The **Little Man Computer (LMC)** is a simplified model of a computer, used to teach the fundamental concepts of how a CPU executes machine code instructions. It was designed as an educational tool to demonstrate the **fetch-decode-execute cycle**, **assembly language**, and how data moves between memory and registers.
+
+<div class="key-term" markdown="1">
+The **Little Man Computer (LMC)** is an instructional model of a simple computer. It has a limited instruction set, a single accumulator register, an input tray, an output tray, and 100 mailboxes (memory locations numbered 00–99).
+</div>
+
+In the LMC model, a "little man" inside the computer reads instructions from mailboxes one at a time, performs the operation, and moves to the next instruction. This mirrors how a real CPU fetches, decodes, and executes instructions.
+
+### LMC Instruction Set
+
+The LMC uses **mnemonics** (short codes) to represent instructions, just like real assembly language. Each instruction has a three-digit numeric machine code equivalent.
+
+| Mnemonic | Numeric Code | Instruction | Description |
+|----------|-------------|-------------|-------------|
+| **INP** | 901 | Input | Takes a value from the input tray and stores it in the accumulator |
+| **OUT** | 902 | Output | Outputs the value in the accumulator to the output tray |
+| **STA** | 3xx | Store | Stores the value in the accumulator into mailbox address xx |
+| **LDA** | 5xx | Load | Loads the value from mailbox address xx into the accumulator |
+| **ADD** | 1xx | Add | Adds the value in mailbox address xx to the accumulator |
+| **SUB** | 2xx | Subtract | Subtracts the value in mailbox address xx from the accumulator |
+| **BRA** | 6xx | Branch always | Unconditionally jumps to the instruction at address xx |
+| **BRZ** | 7xx | Branch if zero | Jumps to address xx only if the accumulator value is zero |
+| **BRP** | 8xx | Branch if positive | Jumps to address xx only if the accumulator value is zero or positive |
+| **HLT** | 000 | Halt | Stops the program |
+| **DAT** | — | Data | Defines a named memory location for storing data (used as a label) |
+
+<div class="exam-tip" markdown="1">
+You must memorise all the LMC mnemonics and what they do. In the exam, you may be asked to **trace** an LMC program (showing the accumulator value and outputs at each step), **write** an LMC program for a given task, or **explain** what an existing LMC program does.
+</div>
+
+### Worked Example: Add Two Numbers
+
+**Task:** Take two numbers as input, add them together, and output the result.
+
+```
+        INP         // Read first number into accumulator
+        STA FIRST   // Store it in mailbox labelled FIRST
+        INP         // Read second number into accumulator
+        ADD FIRST   // Add the value stored in FIRST to the accumulator
+        OUT         // Output the result
+        HLT         // Stop the program
+FIRST   DAT         // Reserve a mailbox labelled FIRST
+```
+
+**Step-by-step trace (inputs: 25, 17):**
+
+| Step | Instruction | Accumulator | Output | Notes |
+|------|-------------|-------------|--------|-------|
+| 1 | INP | 25 | — | User inputs 25 |
+| 2 | STA FIRST | 25 | — | Stores 25 in FIRST |
+| 3 | INP | 17 | — | User inputs 17 |
+| 4 | ADD FIRST | 42 | — | 17 + 25 = 42 |
+| 5 | OUT | 42 | 42 | Outputs 42 |
+| 6 | HLT | 42 | — | Program stops |
+
+### Worked Example: Subtract Two Numbers and Output
+
+**Task:** Input two numbers, subtract the second from the first, and output the result.
+
+```
+        INP         // Read first number into accumulator
+        STA FIRST   // Store it in FIRST
+        INP         // Read second number into accumulator
+        STA SECOND  // Store it in SECOND
+        LDA FIRST   // Load FIRST back into accumulator
+        SUB SECOND  // Subtract SECOND from accumulator
+        OUT         // Output the result
+        HLT         // Stop the program
+FIRST   DAT         // Reserve mailbox for first number
+SECOND  DAT         // Reserve mailbox for second number
+```
+
+### Worked Example: Countdown from Input to Zero
+
+**Task:** Input a number, output a countdown from that number to zero.
+
+```
+        INP         // Read the starting number
+LOOP    OUT         // Output the current value
+        STA COUNT   // Store current value
+        SUB ONE     // Subtract 1
+        BRP LOOP    // If result >= 0, branch back to LOOP
+        HLT         // Stop when negative
+ONE     DAT 1       // Constant value 1
+COUNT   DAT         // Storage for current count
+```
+
+<div class="exam-tip" markdown="1">
+When writing LMC programs, always put your `DAT` labels at the **end** of the program. If you place them in the middle, the CPU will try to execute them as instructions and the program will not work correctly. Remember that `BRZ` and `BRP` are used to create loops and conditional behaviour.
+</div>

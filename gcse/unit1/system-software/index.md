@@ -76,6 +76,8 @@ The OS provides a **user interface** that allows people to interact with the com
 | **CLI (Command Line Interface)** | User types text commands | Powerful, fast for experts, uses fewer resources | Steep learning curve, must memorise commands |
 | **Menu-driven** | Presents numbered or listed options to choose from | Simple, no commands to learn | Limited options, can be slow to navigate |
 | **Natural language** | User speaks or types in everyday language | Very accessible, no training needed | Can misinterpret input, limited functionality |
+| **Touch-sensitive** | User taps, swipes and pinches directly on a touchscreen | Intuitive, no extra peripherals needed, portable | Less precise than a mouse, prone to fingerprints, limited for complex tasks |
+| **Voice-driven** | User speaks commands interpreted by voice recognition | Hands-free, accessible for users with disabilities | Affected by background noise, accents can cause errors, limited command set |
 
 ### GUI (Graphical User Interface)
 
@@ -92,6 +94,22 @@ The OS provides a **user interface** that allows people to interact with the com
 - Commonly used by **system administrators** and **programmers** for tasks such as managing servers, automating scripts, and navigating file systems
 - Commands can be combined and saved as **scripts** to automate repetitive tasks
 - Examples: Windows Command Prompt, PowerShell, Linux Terminal
+
+### Touch-Sensitive Interface
+
+- The user interacts directly with the screen by **tapping, swiping, pinching and dragging**
+- Common on **smartphones, tablets, ATMs, self-service checkouts** and information kiosks
+- Very **intuitive** — even young children can use it with no training
+- Less suitable for tasks requiring **precise input** (e.g. detailed graphic design) or **large amounts of text**
+- Screens can become dirty and difficult to read due to **fingerprints**
+
+### Voice-Driven Interface
+
+- The user speaks commands which are interpreted by **voice recognition software**
+- Used in **smart speakers** (Alexa, Google Home), **virtual assistants** (Siri, Cortana), and **accessibility tools**
+- Allows **hands-free** operation — useful while driving, cooking, or for users with physical disabilities
+- Accuracy can be reduced by **background noise**, strong **accents**, or unusual vocabulary
+- Privacy concerns — the device may be **always listening** to detect the wake word
 
 <div class="exam-tip" markdown="1">
 If asked to compare a GUI and CLI, always discuss **ease of use** (GUI is easier for beginners), **speed** (CLI is faster for experienced users), **system resources** (GUI uses more), and **power/flexibility** (CLI allows scripting and automation).
@@ -119,6 +137,14 @@ If asked to compare a GUI and CLI, always discuss **ease of use** (GUI is easier
 | **File manager** | Organises files and folders | Allows users to browse, move, copy, rename and delete files within the file system |
 | **Firewall** | Prevents unauthorised network access | Monitors incoming and outgoing traffic and blocks connections that violate security rules |
 | **Disk partitioner** | Divides a drive into logical sections | Splits a physical hard drive into separate partitions, each of which can act as an independent drive |
+| **Disk checker** | Detects and repairs file system errors | Scans the disk for bad sectors, corrupted files and file system inconsistencies and attempts to repair them |
+| **Disk formatter** | Prepares a disk for use | Erases all data and sets up a new file system (e.g. NTFS, FAT32) so the OS can read and write to the disk |
+| **Disk compression** | Compresses entire drives to save space | Automatically compresses and decompresses files as they are written to and read from the disk |
+| **System profiler** | Displays system information | Shows details about hardware components, installed software, OS version and resource usage |
+| **Data recovery** | Recovers lost or deleted files | Scans storage media for remnants of deleted files and attempts to restore them |
+| **Clipboard manager** | Extends clipboard functionality | Stores a history of copied items so the user can paste from previous clipboard entries, not just the most recent |
+| **Version control** | Tracks changes to files over time | Records every change made to a set of files, allowing users to revert to previous versions and compare changes |
+| **Archiver** | Combines and compresses multiple files | Packages multiple files and folders into a single archive file (e.g. .zip, .tar) for easier storage and transfer |
 
 ### Antivirus Software
 
@@ -179,4 +205,55 @@ Know the difference between **lossy** and **lossless** compression. Lossy is sui
 
 <div class="exam-tip" markdown="1">
 Remember that a firewall does **not** remove viruses — it prevents unauthorised access. Antivirus software handles detection and removal of malware. They serve different but complementary roles in system security.
+</div>
+
+---
+
+## Hierarchical File Structure
+
+The OS organises files into a **hierarchical (tree) structure** of folders (directories) and subfolders. This makes it possible to locate and manage files efficiently.
+
+### Key Concepts
+
+- **Root directory** — the top-level folder on a drive (e.g. `C:\` on Windows, `/` on Linux/macOS)
+- **Directory (folder)** — a container that holds files and other subdirectories
+- **Subdirectory** — a folder inside another folder
+- **File path** — the route from the root to a specific file, e.g. `C:\Users\Alex\Documents\homework.docx`
+
+### Example Structure
+
+```
+C:\
+├── Program Files
+│   ├── Browser
+│   └── Office
+├── Users
+│   └── Alex
+│       ├── Documents
+│       │   └── homework.docx
+│       ├── Pictures
+│       └── Music
+└── Windows
+    └── System32
+```
+
+### File Attributes
+
+Every file stored by the OS has **attributes** — properties that describe and control the file.
+
+| Attribute | Description |
+|-----------|-------------|
+| **Filename** | The name given to the file by the user |
+| **Extension** | Indicates the file type (e.g. `.docx`, `.jpg`, `.py`) |
+| **File size** | The amount of storage the file occupies (in bytes, KB, MB, etc.) |
+| **Date created** | When the file was first created |
+| **Date modified** | When the file was last changed |
+| **Read-only** | If set, the file can be viewed but not edited or deleted |
+| **Hidden** | If set, the file is not displayed in normal folder views |
+| **System** | Marks a file as part of the OS — should not be modified by the user |
+| **Archive** | Indicates whether the file has changed since the last backup |
+| **Permissions** | Controls which users can read, write or execute the file |
+
+<div class="exam-tip" markdown="1">
+You may be asked to explain why a hierarchical file structure is used. Key reasons: it keeps files **organised**, makes files **easy to locate**, allows different folders to have different **access permissions**, and prevents **name conflicts** (two files can have the same name if they are in different folders).
 </div>

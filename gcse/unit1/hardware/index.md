@@ -169,6 +169,7 @@ If asked to recommend a CPU upgrade, consider the use case. Gaming benefits from
 | Scanner | Digitising physical documents | High quality, slow, bulky |
 | Barcode reader | Reading product codes | Fast, accurate, limited to barcodes |
 | Webcam | Capturing video/images | Real-time, lower quality than dedicated cameras |
+| Sensor | Detecting physical conditions (temperature, pressure, light, motion) | Used in control systems and IoT, provides real-time data, requires ADC to convert analogue readings to digital |
 
 ### Common Output Devices
 
@@ -178,6 +179,7 @@ If asked to recommend a CPU upgrade, consider the use case. Gaming benefits from
 | Printer | Producing hard copies | Permanent output, slow, costs per page |
 | Speaker | Audio output | Range of quality, requires amplification |
 | Projector | Large-screen display | Good for presentations, needs dark room |
+| Actuator | Converts electrical signals into physical movement | Used in control systems (motors, valves, servos), essential for robotics and embedded systems |
 
 ---
 
@@ -320,7 +322,8 @@ Always show your working in calculation questions. Convert your final answer to 
 ### Sound Card
 
 - Processes **audio input and output**
-- Converts digital signals to analogue (for speakers) and analogue to digital (from microphones)
+- Contains a **DAC (Digital-to-Analogue Converter)** which converts digital data into analogue signals for speakers and headphones
+- Contains an **ADC (Analogue-to-Digital Converter)** which converts analogue signals from microphones into digital data the computer can process
 - Built-in sound is sufficient for most users; dedicated cards offer higher quality for music production
 
 ### Motherboard

@@ -69,6 +69,16 @@ Access levels follow the principle of **least privilege** — users should only 
 - **Symmetric encryption** uses the same key to encrypt and decrypt
 - **Asymmetric encryption** uses a pair of keys (public key to encrypt, private key to decrypt)
 
+### Caesar Cipher
+
+A simple example of encryption that helps illustrate the concept:
+
+- Each letter in the message is **shifted** a fixed number of positions along the alphabet
+- For example, with a shift of 3: A→D, B→E, C→F, etc.
+- The word **HELLO** with a shift of 3 becomes **KHOOR**
+- To decrypt, the receiver shifts each letter **back** by the same amount
+- This is a very weak form of encryption (only 25 possible keys) and is easily broken, but it demonstrates the principle of using a key to scramble data
+
 ---
 
 ## Data management: Need for file backups and generations
@@ -94,6 +104,10 @@ The **Grandfather-Father-Son (GFS)** method is a common rotation scheme:
 - **Grandfather** — monthly backup (kept for long-term storage)
 
 This ensures that multiple points in time are available for recovery, and that recent data loss and older data loss can both be addressed.
+
+### The 3-2-1 Backup Rule
+
+A widely recommended backup strategy: keep **3 copies** of data, on **2 different types of media** (e.g. external hard drive and cloud storage), with **1 copy stored off-site** (to protect against fire, flood, or theft at the main location).
 
 <div class="exam-tip" markdown="1">
 When asked about backup strategies, consider **how often** data changes, **how quickly** it needs to be restored, and **how much storage** is available. A hospital with constantly changing records needs frequent backups; a small business might manage with weekly ones.
@@ -143,8 +157,22 @@ Compression reduces the **file size** of data, making it faster to transmit and 
 
 - Reduces file size **without losing any data**
 - The original file can be **perfectly reconstructed** from the compressed version
-- Works by finding patterns and representing repeated data more efficiently (e.g. run-length encoding)
+- Works by finding patterns and representing repeated data more efficiently
+- A common technique is **Run-Length Encoding (RLE)** — replacing runs of repeated values with a count and the value
 - Produces **larger files** than lossy compression
+
+### Run-Length Encoding (RLE) — Worked Example
+
+RLE replaces consecutive repeated values with a **count** followed by the **value**.
+
+**Original data:** `AAAAAABBCCCCDDDD`
+
+**RLE encoded:** `6A2B4C4D`
+
+- 6 × A, 2 × B, 4 × C, 4 × D
+- Original: 16 characters. Encoded: 8 characters — a **50% reduction**
+
+RLE works best with data containing **long runs of repeated values** (e.g. simple images with large areas of the same colour). It works poorly on data with little repetition (e.g. a photograph), where the encoded version may actually be **larger** than the original.
 - Used where **data integrity is critical**: PNG (images), FLAC (audio), ZIP (general files), text files, program code
 
 | Feature | Lossy | Lossless |
@@ -215,6 +243,7 @@ Connecting computers to a network introduces significant security risks because 
 - **Malware distribution** — viruses and worms can spread rapidly across a network
 - **Denial of Service (DoS) attacks** — overwhelming a server with traffic so legitimate users cannot access it
 - **Man-in-the-middle attacks** — an attacker intercepts communication between two parties without their knowledge
+- **Rogue access points** — fake Wi-Fi hotspots set up by attackers that mimic legitimate networks. When users connect, the attacker can intercept all their traffic
 - **Data theft** — sensitive information can be stolen from networked databases
 
 ### Network protection methods
@@ -254,6 +283,8 @@ A typical DRP includes:
 - **Roles and responsibilities** — who is responsible for each part of the recovery process
 - **Communication plan** — how staff, customers, and stakeholders will be informed
 - **Testing** — the plan should be regularly tested and updated
+- **RTO (Recovery Time Objective)** — the maximum acceptable time to restore systems after a disaster (e.g. "systems must be back online within 4 hours")
+- **RPO (Recovery Point Objective)** — the maximum acceptable amount of data loss measured in time (e.g. "we can afford to lose at most 1 hour of data", meaning backups must happen at least hourly)
 
 <div class="key-term" markdown="1">
 **Acceptable use policy (AUP)** — a set of rules that users must agree to follow in order to use an organisation's IT systems. **Disaster recovery policy (DRP)** — a documented plan for restoring IT systems and data after a major incident.
@@ -278,6 +309,12 @@ A typical DRP includes:
 | **Key logger** | Records every keystroke the user makes, capturing passwords, credit card numbers, and messages. | Installed by trojans, or through physical access to the device |
 | **Ransomware** | Encrypts the victim's files and demands payment (ransom) for the decryption key. | Spread through phishing emails, malicious downloads, network exploits |
 | **Adware** | Displays unwanted advertisements, often as pop-ups. May also collect data on browsing habits. | Bundled with free software |
+| **Rootkit** | Hides deep inside the OS to give an attacker ongoing administrator-level access while concealing its presence from antivirus software. | Installed by trojans or exploits; very difficult to detect and remove |
+
+### Real-world malware examples
+
+- **Melissa virus (1999)** — spread via infected Word documents emailed to contacts. It overwhelmed email servers worldwide and caused an estimated $80 million in damages.
+- **WannaCry ransomware (2017)** — exploited a Windows vulnerability to encrypt files on over 200,000 computers in 150 countries. It severely disrupted the NHS, forcing hospitals to cancel appointments and divert ambulances.
 
 <div class="exam-tip" markdown="1">
 Know the **differences** between viruses, worms, and trojans. A virus needs a host file and user action to spread. A worm spreads on its own across networks. A trojan tricks the user into installing it and does not replicate.
@@ -305,6 +342,8 @@ Cyberattacks exploit either **technical weaknesses** in systems or **human behav
 - **Shoulder surfing** — physically looking over someone's shoulder to see their password or sensitive information
 - **Blagging (pretexting)** — creating a fabricated scenario to trick someone into providing information (e.g. pretending to be IT support)
 - **Pharming** — redirecting users from a legitimate website to a fraudulent one by poisoning DNS records
+- **Baiting** — leaving infected USB drives or devices in public places, hoping someone will plug them into a computer out of curiosity
+- **Tailgating** — following an authorised person through a secure door or access point without using their own credentials (also called "piggybacking")
 
 <div class="key-term" markdown="1">
 **Social engineering** — manipulating people into revealing confidential information or performing actions that compromise security, rather than exploiting technical vulnerabilities.
