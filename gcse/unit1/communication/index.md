@@ -92,6 +92,11 @@ A **network topology** is the arrangement of devices (nodes) and connections (li
 
 All devices are connected to a single **backbone cable**. Data is sent in both directions along the cable, and each device checks whether the data is addressed to it.
 
+```mermaid
+graph LR
+    T1[Terminator] --- A[PC 1] --- B[PC 2] --- C[PC 3] --- D[PC 4] --- T2[Terminator]
+```
+
 - A **terminator** is required at each end to prevent signal reflection
 
 | Advantages | Disadvantages |
@@ -105,6 +110,14 @@ All devices are connected to a single **backbone cable**. Data is sent in both d
 
 All devices are connected to a **central switch or hub**. All data passes through this central device.
 
+```mermaid
+graph TD
+    S[Switch] --- A[PC 1]
+    S --- B[PC 2]
+    S --- C[PC 3]
+    S --- D[PC 4]
+```
+
 | Advantages | Disadvantages |
 |------------|---------------|
 | If one cable fails, only that device is affected | If the central switch fails, the whole network goes down |
@@ -116,6 +129,14 @@ All devices are connected to a **central switch or hub**. All data passes throug
 
 Each device is connected to **two other devices**, forming a circular loop. Data travels in **one direction** around the ring.
 
+```mermaid
+graph LR
+    A[PC 1] --> B[PC 2]
+    B --> C[PC 3]
+    C --> D[PC 4]
+    D --> A
+```
+
 | Advantages | Disadvantages |
 |------------|---------------|
 | Data flows in one direction, reducing collisions | If one device or cable fails, the whole network can go down |
@@ -125,6 +146,16 @@ Each device is connected to **two other devices**, forming a circular loop. Data
 ### Mesh Topology
 
 Every device is connected to **every other device** (full mesh) or to **several other devices** (partial mesh). Data can take multiple paths.
+
+```mermaid
+graph TD
+    A[PC 1] --- B[PC 2]
+    A --- C[PC 3]
+    A --- D[PC 4]
+    B --- C
+    B --- D
+    C --- D
+```
 
 | Advantages | Disadvantages |
 |------------|---------------|

@@ -446,12 +446,20 @@ The star schema is the most common data warehouse design:
 - A central **fact table** contains measurable business data (e.g. sales amount, quantity sold) and foreign keys to dimension tables
 - Surrounding **dimension tables** contain descriptive attributes (e.g. product name, customer location, date)
 
-```
-              [Date Dimension]
-                    |
-[Product Dimension] --- [Sales Fact Table] --- [Customer Dimension]
-                    |
-              [Store Dimension]
+```mermaid
+erDiagram
+    SALES_FACT }o--|| DATE_DIMENSION : ""
+    SALES_FACT }o--|| PRODUCT_DIMENSION : ""
+    SALES_FACT }o--|| CUSTOMER_DIMENSION : ""
+    SALES_FACT }o--|| STORE_DIMENSION : ""
+    SALES_FACT {
+        int DateKey FK
+        int ProductKey FK
+        int CustomerKey FK
+        int StoreKey FK
+        int Quantity
+        decimal Revenue
+    }
 ```
 
 The fact table holds: DateKey, ProductKey, CustomerKey, StoreKey, Quantity, Revenue

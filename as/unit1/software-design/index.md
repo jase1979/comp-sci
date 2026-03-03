@@ -58,43 +58,26 @@ A **structure diagram** (also called a hierarchy chart) is a graphical represent
 
 ### Example: Student Report System
 
-```
-                +---------------------------+
-                |  Student Report System    |
-                +---------------------------+
-                       |          |
-          +------------+          +-------------+
-          |                                     |
-+-------------------+               +---------------------+
-|   Input Data      |               |   Output Reports    |
-+-------------------+               +---------------------+
-    |         |                        |            |
-+--------+ +----------+        +-----------+ +-----------+
-| Read   | | Validate |        | Calculate | | Display   |
-| Marks  | | Marks    |        | Averages  | | Results   |
-+--------+ +----------+        +-----------+ +-----------+
+```mermaid
+graph TD
+    A[Student Report System] --> B[Input Data]
+    A --> C[Output Reports]
+    B --> D[Read Marks]
+    B --> E[Validate Marks]
+    C --> F[Calculate Averages]
+    C --> G[Display Results]
 ```
 
 ### Example: ATM System
 
-```
-                    +-------------+
-                    |   ATM       |
-                    +-------------+
-                         |
-       +-----------------+-----------------+
-       |                 |                 |
-+------------+    +-------------+   +-------------+
-| Authenticate|   | Transaction |   | Print       |
-| User       |    | Menu        |   | Receipt     |
-+------------+    +-------------+   +-------------+
-                        |
-          +-------------+-------------+
-          |             |             |
-   +------------+ +-----------+ +-----------+
-   | Withdraw   | | Deposit   | | Check     |
-   | Cash       | | Funds     | | Balance   |
-   +------------+ +-----------+ +-----------+
+```mermaid
+graph TD
+    A[ATM] --> B[Authenticate User]
+    A --> C[Transaction Menu]
+    A --> D[Print Receipt]
+    C --> E[Withdraw Cash]
+    C --> F[Deposit Funds]
+    C --> G[Check Balance]
 ```
 
 <div class="key-term" markdown="1">
@@ -206,28 +189,30 @@ Transitions are typically labelled in the form: **event [condition] / action**
 
 ### Example: ATM Machine
 
-```
-(Start) --> [Idle]
-[Idle] --Insert Card--> [Reading Card]
-[Reading Card] --Card Valid--> [Awaiting PIN]
-[Reading Card] --Card Invalid / Eject Card--> [Idle]
-[Awaiting PIN] --PIN Correct--> [Main Menu]
-[Awaiting PIN] --PIN Incorrect [attempts < 3]--> [Awaiting PIN]
-[Awaiting PIN] --PIN Incorrect [attempts = 3] / Retain Card--> [Idle]
-[Main Menu] --Select Withdraw--> [Processing Withdrawal]
-[Processing Withdrawal] --Sufficient Funds / Dispense Cash--> [Idle]
-[Processing Withdrawal] --Insufficient Funds / Display Message--> [Main Menu]
-[Main Menu] --Select Cancel / Eject Card--> [Idle]
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> ReadingCard : Insert Card
+    ReadingCard --> AwaitingPIN : Card Valid
+    ReadingCard --> Idle : Card Invalid / Eject Card
+    AwaitingPIN --> MainMenu : PIN Correct
+    AwaitingPIN --> AwaitingPIN : PIN Incorrect [attempts < 3]
+    AwaitingPIN --> Idle : PIN Incorrect [attempts = 3] / Retain Card
+    MainMenu --> ProcessingWithdrawal : Select Withdraw
+    ProcessingWithdrawal --> Idle : Sufficient Funds / Dispense Cash
+    ProcessingWithdrawal --> MainMenu : Insufficient Funds / Display Message
+    MainMenu --> Idle : Select Cancel / Eject Card
 ```
 
 ### Example: Simple Traffic Light
 
-```
-(Start) --> [Red]
-[Red] --Timer expires--> [Red and Amber]
-[Red and Amber] --Timer expires--> [Green]
-[Green] --Timer expires--> [Amber]
-[Amber] --Timer expires--> [Red]
+```mermaid
+stateDiagram-v2
+    [*] --> Red
+    Red --> RedAmber : Timer expires
+    RedAmber --> Green : Timer expires
+    Green --> Amber : Timer expires
+    Amber --> Red : Timer expires
 ```
 
 ### When to Use State-Transition Diagrams
@@ -270,14 +255,25 @@ An **Entity-Relationship Diagram (ERD)** is used to model the data that a system
 
 ### Example: School Database
 
-```
-+-------------+         +----------------+         +------------+
-|  TEACHER    | 1     M |    CLASS       | M     M |  STUDENT   |
-|-------------|---------|----------------|---------|------------|
-| TeacherID   |teaches  | ClassID        |attends  | StudentID  |
-| Name        |         | Subject        |         | Name       |
-| Department  |         | Room           |         | DateOfBirth|
-+-------------+         +----------------+         +------------+
+```mermaid
+erDiagram
+    TEACHER ||--o{ CLASS : teaches
+    CLASS }o--o{ STUDENT : attends
+    TEACHER {
+        int TeacherID PK
+        string Name
+        string Department
+    }
+    CLASS {
+        int ClassID PK
+        string Subject
+        string Room
+    }
+    STUDENT {
+        int StudentID PK
+        string Name
+        date DateOfBirth
+    }
 ```
 
 - One TEACHER teaches many CLASSes (1:M).
@@ -289,8 +285,16 @@ Many-to-many relationships cannot be directly implemented in a relational databa
 
 **Example:** STUDENT M:M CLASS becomes:
 
-```
-STUDENT 1----M ENROLMENT M----1 CLASS
+```mermaid
+erDiagram
+    STUDENT ||--o{ ENROLMENT : "enrols in"
+    CLASS ||--o{ ENROLMENT : "has"
+    ENROLMENT {
+        int EnrolmentID PK
+        int StudentID FK
+        int ClassID FK
+        date EnrolmentDate
+    }
 ```
 
 The ENROLMENT entity would contain: EnrolmentID, StudentID (foreign key), ClassID (foreign key), EnrolmentDate.
@@ -421,73 +425,43 @@ A **flowchart** is a diagrammatic representation of an algorithm. It uses standa
 
 ### Example: Check if a Number is Positive, Negative, or Zero
 
-```
-[Start]
-   |
-   v
-/Input number/
-   |
-   v
-<number > 0?>---Yes---> /Output "Positive"/---+
-   |                                           |
-   No                                          |
-   |                                           |
-   v                                           |
-<number < 0?>---Yes---> /Output "Negative"/---+
-   |                                           |
-   No                                          |
-   |                                           |
-   v                                           |
-/Output "Zero"/                                |
-   |                                           |
-   +<------------------------------------------+
-   |
-   v
-[End]
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input number/]
+    B --> C{number > 0?}
+    C -- Yes --> D[/Output 'Positive'/]
+    C -- No --> E{number < 0?}
+    E -- Yes --> F[/Output 'Negative'/]
+    E -- No --> G[/Output 'Zero'/]
+    D --> H([End])
+    F --> H
+    G --> H
 ```
 
 ### Example: Validate Password Entry (Loop)
 
-```
-[Start]
-   |
-   v
-/Input password/
-   |
-   v
-<password = "abc123"?>---Yes---> /Output "Access Granted"/
-   |                                        |
-   No                                       v
-   |                                      [End]
-   v
-/Output "Incorrect, try again"/
-   |
-   +----> (back to Input password)
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input password/]
+    B --> C{password = 'abc123'?}
+    C -- Yes --> D[/Output 'Access Granted'/]
+    D --> E([End])
+    C -- No --> F[/Output 'Incorrect, try again'/]
+    F --> B
 ```
 
 ### Example: Calculate Sum of Numbers 1 to 10
 
-```
-[Start]
-   |
-   v
-[Set total = 0]
-   |
-   v
-[Set i = 1]
-   |
-   v
-<i <= 10?>---No---> /Output total/---> [End]
-   |
-  Yes
-   |
-   v
-[total = total + i]
-   |
-   v
-[i = i + 1]
-   |
-   +----> (back to i <= 10? decision)
+```mermaid
+flowchart TD
+    A([Start]) --> B[Set total = 0]
+    B --> C[Set i = 1]
+    C --> D{i <= 10?}
+    D -- No --> E[/Output total/]
+    E --> F([End])
+    D -- Yes --> G[total = total + i]
+    G --> H[i = i + 1]
+    H --> D
 ```
 
 <div class="key-term" markdown="1">

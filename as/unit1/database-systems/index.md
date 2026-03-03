@@ -71,8 +71,9 @@ Each instance of Entity A is associated with **exactly one** instance of Entity 
 
 **Example:** Each `Employee` has one `DrivingLicence`, and each `DrivingLicence` belongs to one `Employee`.
 
-```
-Employee  1 ──────── 1  DrivingLicence
+```mermaid
+erDiagram
+    EMPLOYEE ||--|| DRIVING_LICENCE : has
 ```
 
 ### One-to-Many (1:M)
@@ -81,8 +82,9 @@ Each instance of Entity A can be associated with **many** instances of Entity B,
 
 **Example:** One `Tutor` teaches many `Students`, but each `Student` has only one `Tutor`.
 
-```
-Tutor  1 ──────── M  Student
+```mermaid
+erDiagram
+    TUTOR ||--o{ STUDENT : teaches
 ```
 
 This is the most common relationship type. It is implemented by placing the primary key of the "one" side as a **foreign key** in the table on the "many" side.
@@ -93,14 +95,17 @@ Each instance of Entity A can be associated with **many** instances of Entity B,
 
 **Example:** A `Student` can enrol on many `Courses`, and each `Course` can have many `Students`.
 
-```
-Student  M ──────── M  Course
+```mermaid
+erDiagram
+    STUDENT }o--o{ COURSE : "enrols on"
 ```
 
 **Important:** A many-to-many relationship **cannot be directly implemented** in a relational database. It must be resolved by creating a **junction table** (also called a linking table or associative entity) that sits between the two tables, converting the M:M relationship into two 1:M relationships.
 
-```
-Student  1 ──── M  Enrolment  M ──── 1  Course
+```mermaid
+erDiagram
+    STUDENT ||--o{ ENROLMENT : ""
+    COURSE ||--o{ ENROLMENT : ""
 ```
 
 The `Enrolment` table typically contains the primary keys of both `Student` and `Course` as foreign keys.

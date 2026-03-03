@@ -1017,12 +1017,14 @@ There are three standard depth-first traversals:
 
 For the following BST:
 
-```
-        50
-       /  \
-     30    70
-    / \   / \
-   20 40 60  80
+```mermaid
+graph TD
+    A((50)) --> B((30))
+    A --> C((70))
+    B --> D((20))
+    B --> E((40))
+    C --> F((60))
+    C --> G((80))
 ```
 
 - **In-order:** 20, 30, 40, 50, 60, 70, 80

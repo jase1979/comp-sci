@@ -68,12 +68,12 @@ The parser checks the token stream against **grammar rules** (often defined in B
 
 For `total = price * 1.2`, the parse tree would show:
 
-```
-        Assignment
-       /          \
-   total       Multiply
-              /        \
-          price        1.2
+```mermaid
+graph TD
+    A[Assignment =] --> B[total]
+    A --> C["Multiply *"]
+    C --> D[price]
+    C --> E[1.2]
 ```
 
 ### Advantages and Disadvantages of Compilers

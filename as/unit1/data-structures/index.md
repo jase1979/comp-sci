@@ -605,12 +605,16 @@ A **Binary Search Tree (BST)** is a binary tree with an additional ordering rule
 
 Example BST storing the values 8, 3, 10, 1, 6, 14:
 
-```
-        8
-       / \
-      3   10
-     / \    \
-    1   6   14
+```mermaid
+graph TD
+    A((8)) --> B((3))
+    A --> C((10))
+    B --> D((1))
+    B --> E((6))
+    C --> F((" "))
+    C --> G((14))
+    style F fill:none,stroke:none
+    linkStyle 4 stroke:none
 ```
 
 ### Tree Traversal Methods

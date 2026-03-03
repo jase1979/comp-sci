@@ -286,17 +286,12 @@ A **process** is a program in execution. The three main process states are **Rea
 
 ### State Transitions
 
-```
-                 Scheduler dispatches
-        ┌──────────────────────────────────┐
-        │                                  ▼
-     [READY] ◄──────────────────────── [RUNNING]
-        ▲         Time slice expires       │
-        │         or preempted             │
-        │                                  │
-        │         I/O or event             │
-        │         completed                ▼
-        └─────────────────────────── [BLOCKED/WAITING]
+```mermaid
+stateDiagram-v2
+    Ready --> Running : Scheduler dispatches
+    Running --> Ready : Time slice expires\nor preempted
+    Running --> Blocked : Process requests I/O\nor waits for resource
+    Blocked --> Ready : I/O or event completed
 ```
 
 | Transition | From → To | Cause |

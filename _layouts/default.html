@@ -15,6 +15,30 @@
   <footer>
     <p>WJEC Computer Science Revision Guide</p>
   </footer>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        background: '#1a1d27',
+        primaryColor: '#2d3148',
+        primaryTextColor: '#e1e4ed',
+        primaryBorderColor: '#6c8aff',
+        lineColor: '#6c8aff',
+        secondaryColor: '#242836',
+        tertiaryColor: '#1a1d27',
+        fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
+        fontSize: '14px',
+        nodeBorder: '#6c8aff',
+        clusterBkg: '#242836',
+        clusterBorder: '#2d3148',
+        edgeLabelBackground: '#1a1d27',
+        nodeTextColor: '#e1e4ed'
+      }
+    });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-visual-basic.min.js"></script>
@@ -30,6 +54,7 @@
     // Add language label + copy button to code blocks
     document.querySelectorAll('.topic-content pre > code').forEach(function(codeEl) {
       var pre = codeEl.parentElement;
+      if (codeEl.classList.contains('language-mermaid')) return;
       var lang = '';
       codeEl.classList.forEach(function(c) {
         if (c.startsWith('language-')) lang = c.replace('language-', '');

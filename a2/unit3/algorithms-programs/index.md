@@ -224,14 +224,20 @@ Sort the list: **[38, 27, 43, 3, 9, 82, 10]**
 
 **Splitting phase:**
 
-```
-[38, 27, 43, 3, 9, 82, 10]
-         /              \
-  [38, 27, 43]      [3, 9, 82, 10]
-    /      \           /         \
- [38]   [27, 43]   [3, 9]    [82, 10]
-         /   \      /   \      /    \
-       [27] [43]  [3]   [9] [82]  [10]
+```mermaid
+graph TD
+    A["38, 27, 43, 3, 9, 82, 10"] --> B["38, 27, 43"]
+    A --> C["3, 9, 82, 10"]
+    B --> D["38"]
+    B --> E["27, 43"]
+    C --> F["3, 9"]
+    C --> G["82, 10"]
+    E --> H["27"]
+    E --> I["43"]
+    F --> J["3"]
+    F --> K["9"]
+    G --> L["82"]
+    G --> M["10"]
 ```
 
 **Merging phase (bottom-up):**
@@ -1171,12 +1177,12 @@ The algorithm is very similar to postfix evaluation, but instead of computing va
 
 **Resulting tree:**
 
-```
-       *
-      / \
-     +   5
-    / \
-   3   4
+```mermaid
+graph TD
+    A["*"] --> B["+"]
+    A --> C["5"]
+    B --> D["3"]
+    B --> E["4"]
 ```
 
 This represents the infix expression: (3 + 4) * 5 = 35.
@@ -1197,12 +1203,14 @@ This represents the infix expression: (3 + 4) * 5 = 35.
 
 **Resulting tree:**
 
-```
-         *
-       /   \
-      +     -
-     / \   / \
-    A   B C   D
+```mermaid
+graph TD
+    A["*"] --> B["+"]
+    A --> C["-"]
+    B --> D["A"]
+    B --> E["B"]
+    C --> F["C"]
+    C --> G["D"]
 ```
 
 This represents: (A + B) * (C - D).

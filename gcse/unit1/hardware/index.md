@@ -71,6 +71,13 @@ The CPU contains three main components:
 
 The CPU continuously repeats three steps to process every instruction:
 
+```mermaid
+graph LR
+    A[Fetch] --> B[Decode]
+    B --> C[Execute]
+    C --> A
+```
+
 ### Registers involved
 
 | Register | Full Name | Purpose |
