@@ -34,8 +34,17 @@ layout: default
     <p>Detailed revision notes for each section above will be added here.</p>
   </div>
   {% else %}
-  <div class="topic-content">
-    {{ content }}
+  <div class="topic-layout">
+    <nav class="toc" id="toc">
+      <div class="toc-toggle" id="toc-toggle">
+        <span>On this page</span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <ul class="toc-list" id="toc-list"></ul>
+    </nav>
+    <div class="topic-content">
+      {{ content }}
+    </div>
   </div>
   {% endif %}
 
@@ -50,3 +59,57 @@ layout: default
     {% endif %}
   </div>
 </div>
+
+<script>
+(function() {
+  var toc = document.getElementById('toc-list');
+  var toggle = document.getElementById('toc-toggle');
+  if (!toc) return;
+
+  // Build TOC from h2 headings
+  var headings = document.querySelectorAll('.topic-content h2');
+  if (headings.length < 2) {
+    var tocEl = document.getElementById('toc');
+    if (tocEl) tocEl.style.display = 'none';
+    return;
+  }
+
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'section-' + i;
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + h.id);
+      // Close mobile menu
+      toc.classList.remove('open');
+    });
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+
+  // Scroll spy — highlight active section
+  var links = toc.querySelectorAll('a');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('active'); });
+        var active = toc.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(function(h) { observer.observe(h); });
+
+  // Mobile toggle
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      toc.classList.toggle('open');
+    });
+  }
+})();
+</script>

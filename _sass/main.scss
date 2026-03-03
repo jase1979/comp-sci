@@ -220,6 +220,110 @@ a:hover { color: var(--accent-hover); }
     }
   }
 
+  .topic-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .toc {
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+
+    .toc-toggle {
+      display: none;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.15rem;
+      }
+
+      a {
+        display: block;
+        padding: 0.35rem 0.6rem;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        border-radius: 6px;
+        border-left: 2px solid transparent;
+        transition: all 0.15s;
+        line-height: 1.35;
+
+        &:hover {
+          color: var(--text);
+          background: var(--surface-hover);
+        }
+
+        &.active {
+          color: var(--accent);
+          background: rgba(108,138,255,0.08);
+          border-left-color: var(--accent);
+          font-weight: 600;
+        }
+      }
+    }
+
+    // Scrollbar styling
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+
+  @media (max-width: 860px) {
+    .topic-layout {
+      display: block;
+    }
+
+    .toc {
+      position: relative;
+      top: 0;
+      max-height: none;
+      margin-bottom: 1.5rem;
+      padding: 0;
+      overflow: visible;
+
+      .toc-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text);
+
+        svg {
+          transition: transform 0.2s;
+        }
+      }
+
+      .toc-list {
+        display: none;
+        padding: 0 0.5rem 0.75rem;
+
+        &.open {
+          display: block;
+        }
+      }
+
+      .toc-list.open + .toc-toggle svg,
+      &:has(.toc-list.open) .toc-toggle svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
   .section-nav {
     background: var(--surface);
     border: 1px solid var(--border);
