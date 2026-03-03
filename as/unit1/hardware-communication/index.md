@@ -30,41 +30,6 @@ The major hardware subsystems include:
 
 Communication elements include the **network interface card (NIC)** which connects a device to a network, **routers** which direct traffic between networks, **switches** which connect devices within a local network, and **modems** which convert between digital and analogue signals.
 
-```python
-# Simulating identification of hardware components
-hardware = {
-    "CPU": "Processing",
-    "RAM": "Primary Memory",
-    "SSD": "Secondary Storage",
-    "Keyboard": "Input",
-    "Monitor": "Output",
-    "NIC": "Communication"
-}
-
-for device, category in hardware.items():
-    print(f"{device} -> {category}")
-```
-
-```vb
-' Simulating identification of hardware components
-Module HardwareDemo
-    Sub Main()
-        Dim hardware As New Dictionary(Of String, String) From {
-            {"CPU", "Processing"},
-            {"RAM", "Primary Memory"},
-            {"SSD", "Secondary Storage"},
-            {"Keyboard", "Input"},
-            {"Monitor", "Output"},
-            {"NIC", "Communication"}
-        }
-
-        For Each item In hardware
-            Console.WriteLine($"{item.Key} -> {item.Value}")
-        Next
-    End Sub
-End Module
-```
-
 ---
 
 ## Architecture: Main Components Including Von Neumann Architectures
@@ -165,54 +130,6 @@ Modern CPUs typically have multiple levels of cache:
 
 When the CPU requests data, it checks L1 first, then L2, then L3, then main memory. A **cache hit** occurs when the data is found in cache; a **cache miss** occurs when it must be fetched from slower main memory.
 
-```python
-# Simulating cache lookup behaviour
-cache = {"addr_100": 42, "addr_200": 17, "addr_300": 89}
-
-def fetch_data(address, cache, main_memory):
-    if address in cache:
-        print(f"Cache HIT for {address}: {cache[address]}")
-        return cache[address]
-    else:
-        print(f"Cache MISS for {address} - fetching from main memory")
-        value = main_memory.get(address, 0)
-        cache[address] = value  # Store in cache for next time
-        return value
-
-main_memory = {"addr_100": 42, "addr_200": 17, "addr_300": 89, "addr_400": 55}
-fetch_data("addr_400", cache, main_memory)
-fetch_data("addr_100", cache, main_memory)
-```
-
-```vb
-' Simulating cache lookup behaviour
-Module CacheDemo
-    Dim cache As New Dictionary(Of String, Integer) From {
-        {"addr_100", 42}, {"addr_200", 17}, {"addr_300", 89}
-    }
-
-    Function FetchData(address As String, mainMemory As Dictionary(Of String, Integer)) As Integer
-        If cache.ContainsKey(address) Then
-            Console.WriteLine($"Cache HIT for {address}: {cache(address)}")
-            Return cache(address)
-        Else
-            Console.WriteLine($"Cache MISS for {address} - fetching from main memory")
-            Dim value As Integer = mainMemory(address)
-            cache(address) = value
-            Return value
-        End If
-    End Function
-
-    Sub Main()
-        Dim mainMemory As New Dictionary(Of String, Integer) From {
-            {"addr_100", 42}, {"addr_200", 17}, {"addr_300", 89}, {"addr_400", 55}
-        }
-        FetchData("addr_400", mainMemory)
-        FetchData("addr_100", mainMemory)
-    End Sub
-End Module
-```
-
 <div class="exam-tip" markdown="1">
 Remember the memory hierarchy from fastest/smallest/most expensive to slowest/largest/cheapest: **Registers > L1 Cache > L2 Cache > L3 Cache > RAM > Secondary Storage**. Each level acts as a buffer for the level below it.
 </div>
@@ -244,46 +161,6 @@ Traditional Von Neumann processors execute instructions sequentially, one at a t
 </div>
 
 Not all tasks benefit equally from parallelism. **Amdahl's Law** states that the speedup from parallelism is limited by the fraction of the task that must be performed sequentially. If 25% of a task is sequential, no amount of parallelism can give more than a 4x speedup.
-
-```python
-# Demonstrating the concept of parallel vs sequential execution time
-import time
-
-# Sequential processing simulation
-def sequential_tasks(tasks):
-    results = []
-    for task in tasks:
-        results.append(task * 2)  # Simulate processing
-    return results
-
-# In real parallel processing, these would run on separate cores
-tasks = list(range(1, 9))
-results = sequential_tasks(tasks)
-print(f"Tasks: {tasks}")
-print(f"Results: {results}")
-print(f"Sequential: {len(tasks)} steps")
-print(f"Parallel (4 cores): {len(tasks) // 4} steps")
-```
-
-```vb
-' Demonstrating the concept of parallel vs sequential execution time
-Module ParallelDemo
-    Sub Main()
-        Dim tasks() As Integer = {1, 2, 3, 4, 5, 6, 7, 8}
-        Dim results(tasks.Length - 1) As Integer
-
-        ' Sequential processing simulation
-        For i As Integer = 0 To tasks.Length - 1
-            results(i) = tasks(i) * 2
-        Next
-
-        Console.WriteLine("Tasks: " & String.Join(", ", tasks))
-        Console.WriteLine("Results: " & String.Join(", ", results))
-        Console.WriteLine($"Sequential: {tasks.Length} steps")
-        Console.WriteLine($"Parallel (4 cores): {tasks.Length \ 4} steps")
-    End Sub
-End Module
-```
 
 ---
 
@@ -476,76 +353,6 @@ Effects of fragmentation:
 **SSDs should NOT be defragmented.** Because SSDs have no moving read/write head, fragmentation does not affect their access times. Defragmenting an SSD wastes write cycles and reduces its lifespan. SSDs use a different optimisation called **TRIM** instead.
 </div>
 
-```python
-# Simulating fragmentation on a disk
-disk = [None] * 20  # 20 empty clusters
-
-# Write file A (4 clusters)
-for i in range(4):
-    disk[i] = "A"
-
-# Write file B (3 clusters)
-for i in range(4, 7):
-    disk[i] = "B"
-
-# Delete file A - leaves a gap
-for i in range(4):
-    disk[i] = None
-
-# Write file C (6 clusters) - has to split across the gap and end
-cluster_index = 0
-clusters_needed = 6
-for i in range(len(disk)):
-    if clusters_needed == 0:
-        break
-    if disk[i] is None:
-        disk[i] = "C"
-        clusters_needed -= 1
-
-print("Fragmented disk:", disk)
-# File C is split: some before B, some after B = fragmented
-```
-
-```vb
-' Simulating fragmentation on a disk
-Module FragmentationDemo
-    Sub Main()
-        Dim disk(19) As String  ' 20 empty clusters
-
-        ' Write file A (4 clusters)
-        For i As Integer = 0 To 3
-            disk(i) = "A"
-        Next
-
-        ' Write file B (3 clusters)
-        For i As Integer = 4 To 6
-            disk(i) = "B"
-        Next
-
-        ' Delete file A - leaves a gap
-        For i As Integer = 0 To 3
-            disk(i) = Nothing
-        Next
-
-        ' Write file C (6 clusters) - has to split across the gap and end
-        Dim clustersNeeded As Integer = 6
-        For i As Integer = 0 To disk.Length - 1
-            If clustersNeeded = 0 Then Exit For
-            If disk(i) Is Nothing Then
-                disk(i) = "C"
-                clustersNeeded -= 1
-            End If
-        Next
-
-        Console.Write("Fragmented disk: ")
-        For Each slot In disk
-            Console.Write(If(slot, "_") & " ")
-        Next
-        Console.WriteLine()
-    End Sub
-End Module
-```
-
 ---
 
 ## Networking: How Networks Communicate
@@ -723,62 +530,6 @@ The **TCP/IP model** is the layered model that underpins the Internet. It has fo
 <div class="key-term" markdown="1">
 A **protocol** is a standardised set of rules governing the format, timing, and error handling of data communication between devices on a network.
 </div>
-
-```python
-# Demonstrating a simple HTTP request concept
-# In practice you would use the requests library
-protocol_ports = {
-    "HTTP": 80,
-    "HTTPS": 443,
-    "FTP": 21,
-    "SMTP": 25,
-    "IMAP": 143,
-    "DHCP": 67,
-    "DNS": 53
-}
-
-for protocol, port in protocol_ports.items():
-    print(f"{protocol} uses port {port}")
-
-# Choosing TCP vs UDP
-def choose_protocol(application):
-    unreliable_ok = ["streaming", "gaming", "VoIP", "DNS"]
-    if application in unreliable_ok:
-        return "UDP (speed over reliability)"
-    else:
-        return "TCP (reliability required)"
-
-print(choose_protocol("email"))       # TCP
-print(choose_protocol("streaming"))   # UDP
-```
-
-```vb
-' Demonstrating protocol port numbers and TCP vs UDP selection
-Module ProtocolDemo
-    Sub Main()
-        Dim protocolPorts As New Dictionary(Of String, Integer) From {
-            {"HTTP", 80}, {"HTTPS", 443}, {"FTP", 21},
-            {"SMTP", 25}, {"IMAP", 143}, {"DHCP", 67}, {"DNS", 53}
-        }
-
-        For Each item In protocolPorts
-            Console.WriteLine($"{item.Key} uses port {item.Value}")
-        Next
-
-        Console.WriteLine(ChooseProtocol("email"))
-        Console.WriteLine(ChooseProtocol("streaming"))
-    End Sub
-
-    Function ChooseProtocol(application As String) As String
-        Dim unreliableOk() As String = {"streaming", "gaming", "VoIP", "DNS"}
-        If unreliableOk.Contains(application) Then
-            Return "UDP (speed over reliability)"
-        Else
-            Return "TCP (reliability required)"
-        End If
-    End Function
-End Module
-```
 
 ---
 
