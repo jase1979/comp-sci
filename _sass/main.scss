@@ -213,7 +213,11 @@ a:hover { color: var(--accent-hover); }
   .topic-header {
     margin-bottom: 2rem;
 
-    h1 { font-size: 1.6rem; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
   }
 
   .section-nav {
@@ -262,23 +266,28 @@ a:hover { color: var(--accent-hover); }
     margin-top: 2rem;
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      font-weight: 700;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--accent);
+      color: var(--accent);
     }
 
     h3 {
-      font-size: 1.1rem;
-      margin-top: 1.5rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 1.8rem;
       margin-bottom: 0.6rem;
       color: var(--text);
+      padding-left: 0.6rem;
+      border-left: 3px solid var(--accent);
     }
 
     h4 {
       font-size: 0.95rem;
+      font-weight: 600;
       margin-top: 1.2rem;
       margin-bottom: 0.4rem;
       color: var(--text-muted);
