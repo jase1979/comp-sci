@@ -1,5 +1,5 @@
 - term: "Absolute error"
-  definition: "is the magnitude of the difference between the true value and the approximated value: |true value - stored value|. **Relative error** is the absolute error expressed as a proportion of the true value: absolute error / |true value|. It is often expressed as a percentage."
+  definition: "is the magnitude of the difference between the true value and the approximated value: |true value - stored value|. Relative error is the absolute error expressed as a proportion of the true value: absolute error / |true value|. It is often expressed as a percentage."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
@@ -19,22 +19,22 @@
   source: "/gcse/unit2/problem-solving/"
 
 - term: "Acceptable use policy (AUP)"
-  definition: "a set of rules that users must agree to follow in order to use an organisation's IT systems. **Disaster recovery policy (DRP)** — a documented plan for restoring IT systems and data after a major incident."
+  definition: "a set of rules that users must agree to follow in order to use an organisation's IT systems. Disaster recovery policy (DRP) — a documented plan for restoring IT systems and data after a major incident."
   level: "GCSE"
   source: "/gcse/unit1/security-data-management/"
 
 - term: "ADC (Analogue-to-Digital Converter)"
-  definition: "converts continuous analogue signals into discrete digital data. A **DAC (Digital-to-Analogue Converter)** does the reverse. These are essential for interfacing between the analogue real world and digital computers."
+  definition: "converts continuous analogue signals into discrete digital data. A DAC (Digital-to-Analogue Converter) does the reverse. These are essential for interfacing between the analogue real world and digital computers."
   level: "AS"
   source: "/as/unit1/hardware-communication/"
 
 - term: "Agile"
-  definition: "is an iterative and incremental approach to software development that delivers working software in short cycles called **sprints** (typically 1--4 weeks). It embraces change, values collaboration, and prioritises working software over comprehensive documentation."
+  definition: "is an iterative and incremental approach to software development that delivers working software in short cycles called sprints (typically 1--4 weeks). It embraces change, values collaboration, and prioritises working software over comprehensive documentation."
   level: "A2"
   source: "/a2/unit3/systems-analysis/"
 
 - term: "Agile development"
-  definition: "is an iterative approach where the system is developed in short cycles called **iterations** (or **sprints**, typically 2-4 weeks). Each iteration produces a working increment of the software that can be reviewed and tested by the client."
+  definition: "is an iterative approach where the system is developed in short cycles called iterations (or sprints, typically 2-4 weeks). Each iteration produces a working increment of the software that can be reviewed and tested by the client."
   level: "AS"
   source: "/as/unit1/systems-analysis/"
 
@@ -44,9 +44,14 @@
   source: "/as/unit1/algorithms-programs/"
 
 - term: "Alpha testing"
-  definition: "is testing done in-house before release. **Beta testing** is testing done by external users in a real-world environment before the final release."
+  definition: "is testing done in-house before release. Beta testing is testing done by external users in a real-world environment before the final release."
   level: "AS"
   source: "/as/unit1/software-testing/"
+
+- term: "ALU (Arithmetic Logic Unit)"
+  definition: "the part of the CPU that performs arithmetic operations (addition, subtraction) and logical comparisons (AND, OR, NOT, greater than, equal to)."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
 
 - term: "Amdahl's Law"
   definition: "states that the maximum speedup of a program through parallelisation is limited by the proportion of the program that must remain sequential. No matter how many processors are added, the sequential portion creates an upper bound on performance improvement."
@@ -74,7 +79,7 @@
   source: "/a2/unit4/data-representation/"
 
 - term: "Arithmetic shift right"
-  definition: "moves all bits to the right by the specified number of positions. Vacated positions on the left are filled with a copy of the **sign bit** (the MSB). This preserves the sign of the number, making it suitable for dividing signed (two's complement) numbers by powers of 2."
+  definition: "moves all bits to the right by the specified number of positions. Vacated positions on the left are filled with a copy of the sign bit (the MSB). This preserves the sign of the number, making it suitable for dividing signed (two's complement) numbers by powers of 2."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
@@ -94,7 +99,7 @@
   source: "/as/unit2/programming-skills/"
 
 - term: "Array"
-  definition: "an ordered collection of elements of the same data type, accessed by index. **Record** — a collection of related fields of potentially different data types, representing a single entity."
+  definition: "an ordered collection of elements of the same data type, accessed by index. Record — a collection of related fields of potentially different data types, representing a single entity."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
@@ -104,17 +109,17 @@
   source: "/gcse/unit2/data-structures-types/"
 
 - term: "ASCII"
-  definition: "is a 7-bit character encoding standard representing 128 characters, primarily English letters, digits, and symbols. **Unicode** is a universal standard that assigns a unique code point to every character from every writing system, with UTF-8 being its most common encoding."
+  definition: "is a 7-bit character encoding standard representing 128 characters, primarily English letters, digits, and symbols. Unicode is a universal standard that assigns a unique code point to every character from every writing system, with UTF-8 being its most common encoding."
   level: "AS"
   source: "/as/unit1/data-representation/"
 
 - term: "ASCII"
-  definition: "a 7-bit character encoding standard representing 128 characters, primarily English letters, digits, and symbols. **Unicode** — a universal character encoding standard that can represent characters from all of the world's writing systems."
+  definition: "a 7-bit character encoding standard representing 128 characters, primarily English letters, digits, and symbols. Unicode — a universal character encoding standard that can represent characters from all of the world's writing systems."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
 - term: "Assembly language"
-  definition: "is a low-level programming language that uses mnemonics to represent machine code instructions. Each assembly instruction corresponds to a single machine code operation. An **assembler** translates assembly language into machine code."
+  definition: "is a low-level programming language that uses mnemonics to represent machine code instructions. Each assembly instruction corresponds to a single machine code operation. An assembler translates assembly language into machine code."
   level: "A2"
   source: "/a2/unit4/hardware-communication/"
 
@@ -124,7 +129,7 @@
   source: "/gcse/unit1/principles-of-programming/"
 
 - term: "Assembly language"
-  definition: "a low-level language where each instruction corresponds to a single machine code operation. It is specific to a particular type of CPU. **LMC (Little Man Computer)** — a simplified model of a computer used to teach assembly language. It has an accumulator, memory (mailboxes), an input tray and an output tray."
+  definition: "a low-level language where each instruction corresponds to a single machine code operation. It is specific to a particular type of CPU. LMC (Little Man Computer) — a simplified model of a computer used to teach assembly language. It has an accumulator, memory (mailboxes), an input tray and an output tray."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
@@ -134,7 +139,7 @@
   source: "/gcse/unit2/algorithms-and-constructs/"
 
 - term: "Attributes"
-  definition: "(also called properties or fields) are the data items stored within an object. **Methods** are the functions defined within a class that operate on the object's attributes and define its behaviour."
+  definition: "(also called properties or fields) are the data items stored within an object. Methods are the functions defined within a class that operate on the object's attributes and define its behaviour."
   level: "A2"
   source: "/a2/unit3/principles-programming/"
 
@@ -148,33 +153,43 @@
   level: "A2"
   source: "/a2/unit3/principles-programming/"
 
+- term: "Bandwidth"
+  definition: "the maximum amount of data that can be transmitted over a network connection in a given time period, usually measured in bits per second (bps). Higher bandwidth allows faster data transfer."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
 - term: "Batch Processing"
   definition: "- Data is collected over a period of time and processed all at once as a single batch, without user interaction during processing."
   level: "AS"
   source: "/as/unit2/analysis-design/"
 
 - term: "Big O notation"
-  definition: "- a mathematical notation that describes the **upper bound** of an algorithm's growth rate as the input size increases. It classifies algorithms by how their time or space requirements scale, ignoring constants and lower-order terms. For example, O(n^2) means the time roughly quadruples when the input doubles."
+  definition: "- a mathematical notation that describes the upper bound of an algorithm's growth rate as the input size increases. It classifies algorithms by how their time or space requirements scale, ignoring constants and lower-order terms. For example, O(n^2) means the time roughly quadruples when the input doubles."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "Big O notation"
-  definition: "is a mathematical notation used to describe the **upper bound** of an algorithm's time complexity or space complexity. It describes how the resource usage of an algorithm grows relative to the input size **n**, focusing on the **worst-case** scenario."
+  definition: "is a mathematical notation used to describe the upper bound of an algorithm's time complexity or space complexity. It describes how the resource usage of an algorithm grows relative to the input size n, focusing on the worst-case scenario."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
 
 - term: "Binary"
-  definition: "base-2 number system using 0 and 1, the native language of computers. **Denary** — base-10 number system used by humans. **Hexadecimal** — base-16 number system using 0–9 and A–F, used as a compact representation of binary."
+  definition: "base-2 number system using 0 and 1, the native language of computers. Denary — base-10 number system used by humans. Hexadecimal — base-16 number system using 0–9 and A–F, used as a compact representation of binary."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
+
+- term: "Binary"
+  definition: "a base-2 number system using only the digits 0 and 1. All data in a computer — text, images, sound, instructions — is ultimately stored and processed as binary."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
 - term: "Binary expression tree"
-  definition: "- a binary tree that represents an arithmetic expression. Each **leaf node** contains an operand (number or variable), and each **internal node** contains an operator. The left and right children of an operator node are its operands (or sub-expressions)."
+  definition: "- a binary tree that represents an arithmetic expression. Each leaf node contains an operand (number or variable), and each internal node contains an operator. The left and right children of an operator node are its operands (or sub-expressions)."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "Binary search"
-  definition: "is a search algorithm that works on **sorted** data by repeatedly dividing the search interval in half. It compares the target value to the middle element and eliminates half of the remaining elements at each step."
+  definition: "is a search algorithm that works on sorted data by repeatedly dividing the search interval in half. It compares the target value to the middle element and eliminates half of the remaining elements at each step."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
 
@@ -184,22 +199,37 @@
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "Binary tree"
-  definition: "- a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. In a **binary search tree (BST)**, all values in the left subtree are less than the node, and all values in the right subtree are greater."
+  definition: "- a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. In a binary search tree (BST), all values in the left subtree are less than the node, and all values in the right subtree are greater."
   level: "A2"
   source: "/a2/unit3/data-structures/"
 
+- term: "Biometric authentication"
+  definition: "a security method that verifies a user's identity using unique biological characteristics such as fingerprints, facial recognition, iris scans, or voice patterns."
+  level: "GCSE"
+  source: "/gcse/unit2/security-authentication/"
+
 - term: "bit"
-  definition: "(binary digit) is the smallest unit of data, holding a value of either `0` or `1`. A **byte** is a group of 8 bits. A **word** is a fixed-size group of bits that the processor can handle as a single unit."
+  definition: "(binary digit) is the smallest unit of data, holding a value of either `0` or `1`. A byte is a group of 8 bits. A word is a fixed-size group of bits that the processor can handle as a single unit."
   level: "AS"
   source: "/as/unit1/data-representation/"
+
+- term: "Bit depth (audio)"
+  definition: "the number of bits used to represent each audio sample. A higher bit depth provides a greater range of amplitude values, resulting in more accurate sound reproduction."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
 
 - term: "Bit masking"
   definition: "is the technique of using a logical operation (AND, OR, XOR) with a carefully chosen pattern of bits (the mask) to extract, set, toggle, or clear specific bits within a binary value."
   level: "AS"
   source: "/as/unit1/logical-operations/"
 
+- term: "Bitmap"
+  definition: "a type of image (also called a raster image) that is stored as a grid of pixels. Each pixel holds a binary value representing its colour. Bitmap file size = width × height × colour depth."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
+
 - term: "Bitmap (raster) image"
-  definition: "an image made up of a grid of pixels, where each pixel stores colour data. **Vector image** — an image made up of mathematical objects defined by properties such as coordinates, fill, and stroke, allowing it to be scaled without loss of quality."
+  definition: "an image made up of a grid of pixels, where each pixel stores colour data. Vector image — an image made up of mathematical objects defined by properties such as coordinates, fill, and stroke, allowing it to be scaled without loss of quality."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
@@ -207,6 +237,11 @@
   definition: "is a short-range wireless technology for exchanging data between devices over short distances using the 2.4 GHz ISM band. It is designed for low-power, low-cost personal area networks (PANs)."
   level: "A2"
   source: "/a2/unit4/hardware-communication/"
+
+- term: "Boolean"
+  definition: "a data type that can hold one of only two values: true or false (1 or 0). Boolean values are fundamental to logic gates, conditional statements, and decision-making in programs."
+  level: "GCSE"
+  source: "/gcse/unit1/logical-operations/"
 
 - term: "Boolean algebra"
   definition: "- a branch of algebra in which variables can only take the values 0 (false) or 1 (true), and the operations are AND (.), OR (+) and NOT (overbar). It provides a formal mathematical framework for simplifying logic circuits and expressions."
@@ -223,8 +258,18 @@
   level: "AS"
   source: "/as/unit1/operating-system/"
 
+- term: "Bus"
+  definition: "a set of parallel wires that carries data, addresses, or control signals between components inside a computer. The three main buses are the data bus, address bus, and control bus."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
+
+- term: "Cache"
+  definition: "a small, very fast memory located close to (or inside) the CPU that stores frequently accessed data and instructions. Cache reduces the time the CPU spends waiting for data from RAM."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
+
 - term: "Call stack"
-  definition: "- a region of memory that stores information about active function calls. Each time a function is called, a new **stack frame** is pushed onto the call stack containing the function's local variables, parameters, and return address. When the function returns, its frame is popped off the stack."
+  definition: "- a region of memory that stores information about active function calls. Each time a function is called, a new stack frame is pushed onto the call stack containing the function's local variables, parameters, and return address. When the function returns, its frame is popped off the stack."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
@@ -239,12 +284,12 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "class"
-  definition: "is a blueprint or template that defines the attributes (data) and methods (behaviour) that objects of that type will have. An **object** is a specific instance of a class, with its own values for the attributes defined by the class."
+  definition: "is a blueprint or template that defines the attributes (data) and methods (behaviour) that objects of that type will have. An object is a specific instance of a class, with its own values for the attributes defined by the class."
   level: "A2"
   source: "/a2/unit3/principles-programming/"
 
 - term: "class"
-  definition: "is a blueprint or template that defines the attributes (data) and methods (behaviour) that objects of that type will have. An **object** is a specific instance of a class, with its own set of attribute values."
+  definition: "is a blueprint or template that defines the attributes (data) and methods (behaviour) that objects of that type will have. An object is a specific instance of a class, with its own set of attribute values."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -263,8 +308,28 @@
   level: "A2"
   source: "/a2/unit3/logical-operations/"
 
+- term: "CLI (Command Line Interface)"
+  definition: "a text-based interface where the user types commands at a prompt to interact with the operating system or software. It provides direct, precise control and is preferred by advanced users and system administrators."
+  level: "GCSE"
+  source: "/gcse/unit1/system-software/"
+
+- term: "CLI (Command Line Interface)"
+  definition: "allows users to interact with the OS by typing text commands at a prompt. Commands are processed by a command-line interpreter (shell). CLIs require knowledge of specific command syntax but offer powerful, scriptable control over the system."
+  level: "AS"
+  source: "/as/unit1/operating-system/"
+
+- term: "Client"
+  definition: "a computer or program that requests services, data, or resources from a server over a network. In a client-server model, the client initiates the request and the server responds."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
+- term: "Cloud computing"
+  definition: "the delivery of computing services — including storage, processing, and software — over the internet ('the cloud') on a pay-as-you-go basis, rather than using local hardware and software."
+  level: "AS"
+  source: "/as/unit1/choosing-software/"
+
 - term: "Cloud-based software"
-  definition: "(Software as a Service, SaaS) is hosted on remote servers and accessed via the internet. **Locally installed software** is installed directly on the user's device and runs using local hardware resources."
+  definition: "(Software as a Service, SaaS) is hosted on remote servers and accessed via the internet. Locally installed software is installed directly on the user's device and runs using local hardware resources."
   level: "AS"
   source: "/as/unit1/choosing-software/"
 
@@ -279,9 +344,14 @@
   source: "/a2/unit3/ethical-issues/"
 
 - term: "collision"
-  definition: "occurs when two devices transmit data simultaneously on a shared medium, causing the signals to interfere. **CSMA/CD** detects collisions on wired networks. **CSMA/CA** avoids collisions on wireless networks."
+  definition: "occurs when two devices transmit data simultaneously on a shared medium, causing the signals to interfere. CSMA/CD detects collisions on wired networks. CSMA/CA avoids collisions on wireless networks."
   level: "AS"
   source: "/as/unit1/data-transmission/"
+
+- term: "Colour depth"
+  definition: "the number of bits used to represent the colour of each pixel in an image. A colour depth of n bits allows 2^n different colours (e.g. 8-bit = 256 colours, 24-bit = 16.7 million colours)."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
 
 - term: "Command and control"
   definition: "voice systems recognise a limited set of short, predefined spoken commands to control a device or application. They use a restricted vocabulary matched against stored templates."
@@ -289,7 +359,7 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "compiler"
-  definition: "translates the entire source code into an executable before the program runs. An **interpreter** translates and executes one line at a time during runtime. An **assembler** translates assembly language (low-level) into machine code."
+  definition: "translates the entire source code into an executable before the program runs. An interpreter translates and executes one line at a time during runtime. An assembler translates assembly language (low-level) into machine code."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -323,10 +393,20 @@
   level: "GCSE"
   source: "/gcse/unit2/algorithms-and-constructs/"
 
+- term: "CPU (Central Processing Unit)"
+  definition: "the main processing chip in a computer that fetches, decodes, and executes instructions. It contains the ALU (Arithmetic Logic Unit), control unit, and registers."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
+
 - term: "Cryptography"
-  definition: "is the science of securing information by transforming it into an unreadable format (**ciphertext**) that can only be converted back to readable form (**plaintext**) by someone with the correct key. **Encryption** is the process of converting plaintext to ciphertext; **decryption** is the reverse."
+  definition: "is the science of securing information by transforming it into an unreadable format (ciphertext) that can only be converted back to readable form (plaintext) by someone with the correct key. Encryption is the process of converting plaintext to ciphertext; decryption is the reverse."
   level: "A2"
   source: "/a2/unit4/data-security/"
+
+- term: "CSS (Cascading Style Sheets)"
+  definition: "a style sheet language used to control the presentation and layout of HTML web pages, including colours, fonts, spacing, and responsive design."
+  level: "GCSE"
+  source: "/gcse/unit2/programming-languages/"
 
 - term: "DAT"
   definition: "used at the end of an LMC program to reserve named memory locations. `DAT` on its own reserves empty space; `DAT 1` reserves space and sets the initial value to 1."
@@ -354,7 +434,7 @@
   source: "/as/unit1/database-systems/"
 
 - term: "Data Flow Diagram (DFD)"
-  definition: "is a graphical tool that shows the flow of data through a system, including its sources, destinations, processes, and storage. A **context diagram** is the highest-level DFD showing the whole system as one process."
+  definition: "is a graphical tool that shows the flow of data through a system, including its sources, destinations, processes, and storage. A context diagram is the highest-level DFD showing the whole system as one process."
   level: "AS"
   source: "/as/unit1/software-design/"
 
@@ -369,7 +449,7 @@
   source: "/a2/unit4/databases-distributed/"
 
 - term: "Data Protection Act 2018"
-  definition: "the main UK law governing how personal data must be handled. It gives individuals rights over their data and imposes obligations on organisations that process it. **Computer Misuse Act 1990** — the law that makes hacking and unauthorised access to computer systems a criminal offence."
+  definition: "the main UK law governing how personal data must be handled. It gives individuals rights over their data and imposes obligations on organisations that process it. Computer Misuse Act 1990 — the law that makes hacking and unauthorised access to computer systems a criminal offence."
   level: "GCSE"
   source: "/gcse/unit1/ethical-legal-environmental/"
 
@@ -384,7 +464,7 @@
   source: "/as/unit1/data-transmission/"
 
 - term: "data type"
-  definition: "specifies the kind of value a variable can store and the operations that can be performed on it. The five core data types at AS level are: **integer**, **real** (float/double), **Boolean**, **character**, and **string**."
+  definition: "specifies the kind of value a variable can store and the operations that can be performed on it. The five core data types at AS level are: integer, real (float/double), Boolean, character, and string."
   level: "AS"
   source: "/as/unit1/program-design/"
 
@@ -403,13 +483,23 @@
   level: "A2"
   source: "/a2/unit4/databases-distributed/"
 
+- term: "Database"
+  definition: "an organised collection of structured data stored electronically, designed to allow efficient storage, retrieval, and management of information."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
 - term: "DBMS"
   definition: "is software that manages access to a database, providing data definition, data manipulation, security, and integrity features while hiding the physical storage details from users."
   level: "AS"
   source: "/as/unit1/database-systems/"
 
+- term: "DDoS (Distributed Denial of Service)"
+  definition: "an attack where many compromised computers (a botnet) simultaneously flood a target server with requests, overwhelming its resources and making it unavailable to legitimate users."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
 - term: "De Morgan's Laws"
-  definition: "- two transformation rules that relate AND and OR operations through complementation: - **First law:** <span style=\"text-decoration:overline\">A . B</span> = A&#x0304; + B&#x0304; (the complement of AND equals OR of complements) - **Second law:** <span style=\"text-decoration:overline\">A + B</span> = A&#x0304; . B&#x0304; (the complement of OR equals AND of complements) In words: \"break the bar, change the sign.\""
+  definition: "- two transformation rules that relate AND and OR operations through complementation: - First law: <span style=\"text-decoration:overline\">A . B</span> = A&#x0304; + B&#x0304; (the complement of AND equals OR of complements) - Second law: <span style=\"text-decoration:overline\">A + B</span> = A&#x0304; . B&#x0304; (the complement of OR equals AND of complements) In words: \"break the bar, change the sign.\""
   level: "A2"
   source: "/a2/unit3/logical-operations/"
 
@@ -429,7 +519,7 @@
   source: "/gcse/unit1/software-engineering/"
 
 - term: "Declarative programming"
-  definition: "specifies the desired result without explicitly listing the step-by-step commands needed to achieve it. **Logic programming** uses facts and rules to answer queries through logical inference."
+  definition: "specifies the desired result without explicitly listing the step-by-step commands needed to achieve it. Logic programming uses facts and rules to answer queries through logical inference."
   level: "A2"
   source: "/a2/unit3/principles-programming/"
 
@@ -468,13 +558,18 @@
   level: "A2"
   source: "/a2/unit4/databases-distributed/"
 
+- term: "DNS (Domain Name System)"
+  definition: "a system that translates human-readable domain names (e.g. www.example.com) into numerical IP addresses that computers use to identify each other on a network."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
 - term: "DRY (Don't Repeat Yourself)"
   definition: "- A principle of software development that states every piece of knowledge or logic should have a single, unambiguous representation in the code. If you find yourself copying and pasting code, you should probably extract it into a subroutine."
   level: "AS"
   source: "/as/unit2/code-quality/"
 
 - term: "Dry running"
-  definition: "(desk checking) is manually working through a program on paper, line by line, to verify that it produces the correct output. A **trace table** is a tabular record of variable values at each step of execution."
+  definition: "(desk checking) is manually working through a program on paper, line by line, to verify that it produces the correct output. A trace table is a tabular record of variable values at each step of execution."
   level: "AS"
   source: "/as/unit1/software-testing/"
 
@@ -484,7 +579,7 @@
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "embedded system"
-  definition: "is a computer system built into a larger device to perform a **dedicated function**. It is not a general-purpose computer — it is designed for one specific task."
+  definition: "is a computer system built into a larger device to perform a dedicated function. It is not a general-purpose computer — it is designed for one specific task."
   level: "GCSE"
   source: "/gcse/unit1/hardware/"
 
@@ -494,17 +589,17 @@
   source: "/a2/unit3/principles-programming/"
 
 - term: "Encapsulation"
-  definition: "is the principle of bundling data (attributes) and the methods that operate on that data into a single unit (a class), and restricting direct access to some of the object's components. This is achieved through **access modifiers** (public, private, protected)."
+  definition: "is the principle of bundling data (attributes) and the methods that operate on that data into a single unit (a class), and restricting direct access to some of the object's components. This is achieved through access modifiers (public, private, protected)."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
 - term: "Encapsulation"
-  definition: "the process of wrapping data with protocol headers as it moves down through the layers. Each layer adds its own control information. **De-encapsulation** is the reverse process at the receiving end."
+  definition: "the process of wrapping data with protocol headers as it moves down through the layers. Each layer adds its own control information. De-encapsulation is the reverse process at the receiving end."
   level: "GCSE"
   source: "/gcse/unit1/communication/"
 
 - term: "Encapsulation"
-  definition: "the principle of keeping an object's data **private** and only allowing access through **public methods** (getters and setters). This protects the data from being changed in unexpected ways."
+  definition: "the principle of keeping an object's data private and only allowing access through public methods (getters and setters). This protects the data from being changed in unexpected ways."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
@@ -514,7 +609,7 @@
   source: "/gcse/unit1/security-data-management/"
 
 - term: "entity"
-  definition: "is a real-world object or concept about which data is stored (e.g., Student, Course, Teacher). A **relationship** describes how entities are associated with each other."
+  definition: "is a real-world object or concept about which data is stored (e.g., Student, Course, Teacher). A relationship describes how entities are associated with each other."
   level: "AS"
   source: "/as/unit1/database-systems/"
 
@@ -524,7 +619,7 @@
   source: "/as/unit2/analysis-design/"
 
 - term: "Entity-Relationship Diagram (ERD)"
-  definition: "models the data entities in a system and the relationships between them. A **primary key** uniquely identifies each record in an entity. A **foreign key** is an attribute in one entity that references the primary key of another entity."
+  definition: "models the data entities in a system and the relationships between them. A primary key uniquely identifies each record in an entity. A foreign key is an attribute in one entity that references the primary key of another entity."
   level: "AS"
   source: "/as/unit1/software-design/"
 
@@ -534,7 +629,7 @@
   source: "/as/unit2/programming-skills/"
 
 - term: "Ethernet"
-  definition: "the most common wired networking standard, using copper or fibre optic cables. **Wi-Fi** — a wireless networking standard that uses radio waves to connect devices to a network."
+  definition: "the most common wired networking standard, using copper or fibre optic cables. Wi-Fi — a wireless networking standard that uses radio waves to connect devices to a network."
   level: "GCSE"
   source: "/gcse/unit1/communication/"
 
@@ -549,7 +644,7 @@
   source: "/gcse/unit1/ethical-legal-environmental/"
 
 - term: "expert system"
-  definition: "uses a **knowledge base** of facts and rules, combined with an **inference engine**, to draw conclusions and provide advice in a specialised domain. It aims to replicate the reasoning of a human expert."
+  definition: "uses a knowledge base of facts and rules, combined with an inference engine, to draw conclusions and provide advice in a specialised domain. It aims to replicate the reasoning of a human expert."
   level: "A2"
   source: "/a2/unit4/software-systems/"
 
@@ -564,7 +659,7 @@
   source: "/as/unit1/hardware-communication/"
 
 - term: "Field:"
-  definition: "A single item of data (e.g., a surname, a date of birth). **Record:** A collection of related fields describing one entity (e.g., one student). **File:** A collection of related records (e.g., all students in a school)."
+  definition: "A single item of data (e.g., a surname, a date of birth). Record: A collection of related fields describing one entity (e.g., one student). File: A collection of related records (e.g., all students in a school)."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
 
@@ -574,27 +669,27 @@
   source: "/gcse/unit1/system-software/"
 
 - term: "First Normal Form (1NF):"
-  definition: "A relation is in 1NF if it contains no repeating groups and every field contains only **atomic** (indivisible) values. Each row must be uniquely identifiable."
+  definition: "A relation is in 1NF if it contains no repeating groups and every field contains only atomic (indivisible) values. Each row must be uniquely identifiable."
   level: "A2"
   source: "/a2/unit4/databases-distributed/"
 
 - term: "Fixed-length records"
-  definition: "allocate the same amount of space for every record, allowing direct calculation of record positions. **Variable-length records** use only the space needed, separated by delimiters."
+  definition: "allocate the same amount of space for every record, allowing direct calculation of record positions. Variable-length records use only the space needed, separated by delimiters."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
 
 - term: "flat file database"
-  definition: "stores all data in one table, leading to redundancy and anomalies. A **relational database** stores data in multiple linked tables, reducing redundancy and improving data integrity."
+  definition: "stores all data in one table, leading to redundancy and anomalies. A relational database stores data in multiple linked tables, reducing redundancy and improving data integrity."
   level: "AS"
   source: "/as/unit1/database-systems/"
 
 - term: "Floating point representation"
-  definition: "stores real numbers (numbers with fractional parts) using two components: the **mantissa** (which holds the significant digits of the number) and the **exponent** (which determines the position of the binary point). This is analogous to scientific notation in denary."
+  definition: "stores real numbers (numbers with fractional parts) using two components: the mantissa (which holds the significant digits of the number) and the exponent (which determines the position of the binary point). This is analogous to scientific notation in denary."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
 - term: "Floating point representation"
-  definition: "stores a real number as a **mantissa** (the significant digits) and an **exponent** (the power of 2), allowing both very large and very small numbers to be represented. **Normalisation** ensures the mantissa starts with `01` (positive) or `10` (negative) to maximise precision."
+  definition: "stores a real number as a mantissa (the significant digits) and an exponent (the power of 2), allowing both very large and very small numbers to be represented. Normalisation ensures the mantissa starts with `01` (positive) or `10` (negative) to maximise precision."
   level: "AS"
   source: "/as/unit1/data-representation/"
 
@@ -613,13 +708,18 @@
   level: "AS"
   source: "/as/unit2/analysis-design/"
 
+- term: "FTP (File Transfer Protocol)"
+  definition: "a protocol used to transfer files between a client and a server over a network. It supports uploading, downloading, renaming, and deleting files on a remote server."
+  level: "AS"
+  source: "/as/unit1/hardware-communication/"
+
 - term: "function"
-  definition: "is a subroutine that returns a value. A **procedure** (called a `Sub` in VB.NET) is a subroutine that performs an action but does not return a value."
+  definition: "is a subroutine that returns a value. A procedure (called a `Sub` in VB.NET) is a subroutine that performs an action but does not return a value."
   level: "AS"
   source: "/as/unit1/program-design/"
 
-- term: "Functional programming** is a paradigm where programs are constructed by applying and composing **pure functions"
-  definition: "- functions that always produce the same output for the same input and have no side effects."
+- term: "Functional programming"
+  definition: "is a paradigm where programs are constructed by applying and composing pure functions. Functions are first-class citizens — they can be passed as arguments, returned from other functions, and assigned to variables."
   level: "A2"
   source: "/a2/unit3/principles-programming/"
 
@@ -629,7 +729,7 @@
   source: "/a2/unit3/system-design/"
 
 - term: "GDPR (General Data Protection Regulation)"
-  definition: "is a comprehensive data protection framework that gives individuals control over their personal data and requires organisations to handle that data lawfully, transparently, and securely. In the UK, it is implemented through the **Data Protection Act 2018**."
+  definition: "is a comprehensive data protection framework that gives individuals control over their personal data and requires organisations to handle that data lawfully, transparently, and securely. In the UK, it is implemented through the Data Protection Act 2018."
   level: "AS"
   source: "/as/unit1/ethical-legal-issues/"
 
@@ -648,13 +748,23 @@
   level: "A2"
   source: "/a2/unit4/hardware-communication/"
 
+- term: "GUI (Graphical User Interface)"
+  definition: "a visual interface that uses windows, icons, menus, and pointers (WIMP) to allow users to interact with the computer. GUIs are intuitive and user-friendly but consume more system resources than a CLI."
+  level: "GCSE"
+  source: "/gcse/unit1/system-software/"
+
+- term: "GUI (Graphical User Interface)"
+  definition: "uses visual elements — windows, icons, menus, and pointers (WIMP) — to allow users to interact with the computer. Events such as mouse clicks and key presses are handled by the OS and passed to the appropriate application."
+  level: "AS"
+  source: "/as/unit1/operating-system/"
+
 - term: "Handshaking"
   definition: "is the exchange of control signals between two devices to establish the rules and parameters of a communication session before any data is transmitted."
   level: "AS"
   source: "/as/unit1/hardware-communication/"
 
 - term: "Hardware"
-  definition: "refers to the physical, tangible components of a computer system -- the parts you can touch. **Software** refers to the programs and data that instruct the hardware what to do."
+  definition: "refers to the physical, tangible components of a computer system -- the parts you can touch. Software refers to the programs and data that instruct the hardware what to do."
   level: "AS"
   source: "/as/unit1/hardware-communication/"
 
@@ -664,12 +774,12 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "Hash table"
-  definition: "- a data structure that maps keys to values using a **hash function**. The hash function converts a key into an array index, allowing average-case O(1) insertion, deletion, and lookup. When two different keys produce the same index, a **collision** occurs and must be resolved."
+  definition: "- a data structure that maps keys to values using a hash function. The hash function converts a key into an array index, allowing average-case O(1) insertion, deletion, and lookup. When two different keys produce the same index, a collision occurs and must be resolved."
   level: "A2"
   source: "/a2/unit3/data-structures/"
 
 - term: "hash table"
-  definition: "uses a **hash function** to map a key to an index in an array, allowing near-instant data retrieval. A **collision** occurs when two different keys produce the same hash value."
+  definition: "uses a hash function to map a key to an index in an array, allowing near-instant data retrieval. A collision occurs when two different keys produce the same hash value."
   level: "AS"
   source: "/as/unit1/data-structures/"
 
@@ -677,6 +787,11 @@
   definition: "is a function that takes a key value as input and produces a storage address as output. The same key always produces the same address (deterministic)."
   level: "A2"
   source: "/a2/unit4/organisation-data/"
+
+- term: "HDD (Hard Disk Drive)"
+  definition: "a secondary storage device that stores data on spinning magnetic platters read by a moving head. HDDs offer large storage capacity at low cost but are slower and more fragile than SSDs."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
 
 - term: "Hexadecimal"
   definition: "is a base-16 number system using digits 0-9 and letters A-F. It provides a compact, human-readable way to represent binary data, where each hexadecimal digit corresponds to exactly 4 binary bits."
@@ -698,8 +813,23 @@
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
+- term: "HTML (HyperText Markup Language)"
+  definition: "a markup language used to define the structure and content of web pages. HTML uses tags to describe elements such as headings, paragraphs, links, and images."
+  level: "GCSE"
+  source: "/gcse/unit2/programming-languages/"
+
+- term: "HTTP (HyperText Transfer Protocol)"
+  definition: "the protocol used by web browsers to request and receive web pages from web servers. It operates at the application layer and defines how messages are formatted and transmitted."
+  level: "AS"
+  source: "/as/unit1/hardware-communication/"
+
+- term: "HTTPS (HyperText Transfer Protocol Secure)"
+  definition: "a secure version of HTTP that adds encryption using TLS/SSL to protect data in transit between the browser and server, preventing eavesdropping and tampering."
+  level: "AS"
+  source: "/as/unit1/hardware-communication/"
+
 - term: "Hub"
-  definition: "broadcasts data to all connected devices. **Switch** — sends data only to the intended device using MAC addresses. **Router** — directs packets between networks using IP addresses. **Bridge** — connects two network segments. **WAP** — allows wireless devices to join a wired network. **NIC** — hardware in a device that enables network connectivity, identified by a unique MAC address."
+  definition: "broadcasts data to all connected devices. Switch — sends data only to the intended device using MAC addresses. Router — directs packets between networks using IP addresses. Bridge — connects two network segments. WAP — allows wireless devices to join a wired network. NIC — hardware in a device that enables network connectivity, identified by a unique MAC address."
   level: "GCSE"
   source: "/gcse/unit1/communication/"
 
@@ -719,7 +849,7 @@
   source: "/a2/unit4/organisation-data/"
 
 - term: "Indexed sequential access"
-  definition: "stores records in key order with an **index** that enables fast lookup by pointing to the approximate location of a record, reducing the number of records that must be searched."
+  definition: "stores records in key order with an index that enables fast lookup by pointing to the approximate location of a record, reducing the number of records that must be searched."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
 
@@ -729,12 +859,12 @@
   source: "/a2/unit3/principles-programming/"
 
 - term: "Inheritance"
-  definition: "allows a new class (the **child** or **subclass**) to inherit attributes and methods from an existing class (the **parent** or **superclass**). The child class can extend or override the inherited behaviour."
+  definition: "allows a new class (the child or subclass) to inherit attributes and methods from an existing class (the parent or superclass). The child class can extend or override the inherited behaviour."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
 - term: "Inheritance"
-  definition: "when a **subclass** (child class) inherits all the properties and methods of a **superclass** (parent class). The subclass can add new behaviour or override existing behaviour."
+  definition: "when a subclass (child class) inherits all the properties and methods of a superclass (parent class). The subclass can add new behaviour or override existing behaviour."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
@@ -759,29 +889,34 @@
   source: "/as/unit2/analysis-design/"
 
 - term: "interface"
-  definition: "is the way that different modules communicate with each other. In practice, this means the **parameters** a function accepts and the **value** it returns."
+  definition: "is the way that different modules communicate with each other. In practice, this means the parameters a function accepts and the value it returns."
   level: "GCSE"
   source: "/gcse/unit2/problem-solving/"
 
 - term: "Internet"
-  definition: "is a worldwide collection of interconnected computer networks that communicate using the TCP/IP protocol suite. It is not a single network but a **network of networks**."
+  definition: "is a worldwide collection of interconnected computer networks that communicate using the TCP/IP protocol suite. It is not a single network but a network of networks."
   level: "A2"
   source: "/a2/unit4/data-transmission/"
 
 - term: "Internet"
-  definition: "is a global interconnected network of networks that uses TCP/IP to communicate. The **World Wide Web (WWW)** is a service that runs on top of the Internet, using HTTP to deliver web pages -- it is NOT the same as the Internet."
+  definition: "is a global interconnected network of networks that uses TCP/IP to communicate. The World Wide Web (WWW) is a service that runs on top of the Internet, using HTTP to deliver web pages -- it is NOT the same as the Internet."
   level: "AS"
   source: "/as/unit1/hardware-communication/"
 
 - term: "interrupt"
-  definition: "is a signal that temporarily halts the current process so the CPU can handle a higher-priority event. An **Interrupt Service Routine (ISR)** is the special routine that handles a specific type of interrupt."
+  definition: "is a signal that temporarily halts the current process so the CPU can handle a higher-priority event. An Interrupt Service Routine (ISR) is the special routine that handles a specific type of interrupt."
   level: "AS"
   source: "/as/unit1/operating-system/"
 
 - term: "Interrupt Service Routine (ISR)"
-  definition: "is a special routine stored in memory that handles a specific type of interrupt. The **interrupt vector table** maps each interrupt type to the memory address of its ISR."
+  definition: "is a special routine stored in memory that handles a specific type of interrupt. The interrupt vector table maps each interrupt type to the memory address of its ISR."
   level: "A2"
   source: "/a2/unit4/operating-system/"
+
+- term: "IP (Internet Protocol)"
+  definition: "a network layer protocol that wraps data into packets, adding source and destination IP addresses, and routes them across interconnected networks to their destination."
+  level: "AS"
+  source: "/as/unit1/data-transmission/"
 
 - term: "IP address"
   definition: "a unique numerical address assigned to every device on a network, used to identify the device and route data to it. IPv4 uses 32 bits; IPv6 uses 128 bits."
@@ -793,8 +928,23 @@
   level: "GCSE"
   source: "/gcse/unit2/algorithms-and-constructs/"
 
+- term: "JavaScript"
+  definition: "a high-level programming language primarily used to add interactive behaviour to web pages. It runs in the browser and can respond to user events, manipulate the DOM, and communicate with servers."
+  level: "GCSE"
+  source: "/gcse/unit2/programming-languages/"
+
 - term: "LAN"
-  definition: "a network confined to a small area, owned and managed by one organisation. **WAN** — a network spanning a large area, often using infrastructure from telecommunications providers. **PAN** — a very small network connecting personal devices, typically using Bluetooth. **MAN** — a network spanning a city, connecting multiple LANs. **VPN** — a secure, encrypted connection over a public network that allows private data to be sent safely."
+  definition: "a network confined to a small area, owned and managed by one organisation. WAN — a network spanning a large area, often using infrastructure from telecommunications providers. PAN — a very small network connecting personal devices, typically using Bluetooth. MAN — a network spanning a city, connecting multiple LANs. VPN — a secure, encrypted connection over a public network that allows private data to be sent safely."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
+- term: "LAN (Local Area Network)"
+  definition: "a network that covers a small geographical area such as a home, school, or office building. LANs typically offer high data transfer speeds and low latency."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
+- term: "Latency"
+  definition: "the time delay between sending a request and receiving a response over a network. Lower latency means faster response times. Factors affecting latency include distance, congestion, and the number of hops."
   level: "GCSE"
   source: "/gcse/unit1/communication/"
 
@@ -819,12 +969,12 @@
   source: "/a2/unit3/data-structures/"
 
 - term: "linked list"
-  definition: "is a dynamic data structure where each **node** contains a data value and a pointer to the next node. A **head pointer** indicates the start of the list."
+  definition: "is a dynamic data structure where each node contains a data value and a pointer to the next node. A head pointer indicates the start of the list."
   level: "AS"
   source: "/as/unit1/data-structures/"
 
 - term: "linker"
-  definition: "combines one or more object code files (produced by the compiler) with any required **library** code into a single executable file. It resolves references between separately compiled modules."
+  definition: "combines one or more object code files (produced by the compiler) with any required library code into a single executable file. It resolves references between separately compiled modules."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -844,7 +994,7 @@
   source: "/a2/unit3/data-structures/"
 
 - term: "loader"
-  definition: "is a part of the operating system that loads an executable file from secondary storage into **main memory (RAM)** and prepares it for execution by the CPU."
+  definition: "is a part of the operating system that loads an executable file from secondary storage into main memory (RAM) and prepares it for execution by the CPU."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -854,7 +1004,7 @@
   source: "/gcse/unit1/program-construction/"
 
 - term: "local variable"
-  definition: "is declared inside a subroutine and is only accessible within that subroutine. A **global variable** is declared outside all subroutines and is accessible throughout the entire program. Best practice is to use local variables wherever possible and pass data between subroutines using parameters."
+  definition: "is declared inside a subroutine and is only accessible within that subroutine. A global variable is declared outside all subroutines and is accessible throughout the entire program. Best practice is to use local variables wherever possible and pass data between subroutines using parameters."
   level: "AS"
   source: "/as/unit1/program-design/"
 
@@ -879,24 +1029,34 @@
   source: "/gcse/unit1/logical-operations/"
 
 - term: "Logical shift left"
-  definition: "moves all bits to the left by the specified number of positions. Vacated positions on the right are filled with **0s**. Bits shifted out of the left end are lost. Each shift left **multiplies** the value by 2."
+  definition: "moves all bits to the left by the specified number of positions. Vacated positions on the right are filled with 0s. Bits shifted out of the left end are lost. Each shift left multiplies the value by 2."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
 - term: "Logical shift right"
-  definition: "moves all bits to the right by the specified number of positions. Vacated positions on the left are filled with **0s**. Bits shifted out of the right end are lost. Each shift right **divides** the value by 2 (integer division, truncating any remainder)."
+  definition: "moves all bits to the right by the specified number of positions. Vacated positions on the left are filled with 0s. Bits shifted out of the right end are lost. Each shift right divides the value by 2 (integer division, truncating any remainder)."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
 - term: "Lookup table"
-  definition: "a validation technique that compares input against a predefined list of acceptable values, often presented as a dropdown menu. **Check digit** — an extra digit calculated from other digits using an algorithm, appended to a code (such as a barcode or ISBN) to detect data entry or transmission errors."
+  definition: "a validation technique that compares input against a predefined list of acceptable values, often presented as a dropdown menu. Check digit — an extra digit calculated from other digits using an algorithm, appended to a code (such as a barcode or ISBN) to detect data entry or transmission errors."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
 - term: "Lossless compression"
-  definition: "reduces file size while allowing the original data to be perfectly reconstructed. **Lossy compression** achieves greater size reduction by permanently removing some data, meaning the original cannot be fully restored."
+  definition: "reduces file size while allowing the original data to be perfectly reconstructed. Lossy compression achieves greater size reduction by permanently removing some data, meaning the original cannot be fully restored."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
+
+- term: "Lossy compression"
+  definition: "a method of reducing file size by permanently removing some data, particularly details that are less noticeable to humans. The original file cannot be perfectly reconstructed. Used for images (JPEG), audio (MP3), and video."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
+
+- term: "MAC address"
+  definition: "a unique hardware identifier assigned to a network interface card (NIC) by the manufacturer. It is a 48-bit address usually written as six pairs of hexadecimal digits (e.g. AA:BB:CC:DD:EE:FF) and is used for communication within a local network."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
 
 - term: "Malware"
   definition: "malicious software designed to damage, disrupt, or gain unauthorised access to a computer system. It is a general term covering all types of harmful programs."
@@ -909,7 +1069,7 @@
   source: "/a2/unit3/logical-operations/"
 
 - term: "master file"
-  definition: "is a permanent file containing the current state of data (e.g. customer accounts). A **transaction file** is a temporary file containing recent changes (additions, deletions, amendments) to be applied to the master file."
+  definition: "is a permanent file containing the current state of data (e.g. customer accounts). A transaction file is a temporary file containing recent changes (additions, deletions, amendments) to be applied to the master file."
   level: "A2"
   source: "/a2/unit4/organisation-data/"
 
@@ -919,12 +1079,12 @@
   source: "/as/unit1/organisation-of-data/"
 
 - term: "Merge sort"
-  definition: "- a divide-and-conquer sorting algorithm that recursively splits a list in half, sorts each half, and then merges the two sorted halves back together. It is a **stable** sort with a guaranteed time complexity of **O(n log n)** in all cases."
+  definition: "- a divide-and-conquer sorting algorithm that recursively splits a list in half, sorts each half, and then merges the two sorted halves back together. It is a stable sort with a guaranteed time complexity of O(n log n) in all cases."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "Merge sort"
-  definition: "is a **divide and conquer** sorting algorithm. It recursively splits the list into halves until each sub-list contains a single element, then merges the sub-lists back together in sorted order."
+  definition: "is a divide and conquer sorting algorithm. It recursively splits the list into halves until each sub-list contains a single element, then merges the sub-lists back together in sorted order."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
 
@@ -949,7 +1109,7 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "Multiplexing"
-  definition: "is the process of combining multiple signals over a single shared communication channel. A **multiplexer (MUX)** combines the signals at the sending end, and a **demultiplexer (DEMUX)** separates them at the receiving end."
+  definition: "is the process of combining multiple signals over a single shared communication channel. A multiplexer (MUX) combines the signals at the sending end, and a demultiplexer (DEMUX) separates them at the receiving end."
   level: "AS"
   source: "/as/unit1/data-transmission/"
 
@@ -989,7 +1149,7 @@
   source: "/gcse/unit2/programming-languages/"
 
 - term: "Open source software"
-  definition: "provides access to its source code, allowing users to view, modify, and distribute it. **Proprietary software** keeps its source code secret and requires users to purchase a licence for use."
+  definition: "provides access to its source code, allowing users to view, modify, and distribute it. Proprietary software keeps its source code secret and requires users to purchase a licence for use."
   level: "AS"
   source: "/as/unit1/choosing-software/"
 
@@ -1034,7 +1194,7 @@
   source: "/as/unit2/programming-skills/"
 
 - term: "Parameter passing by value"
-  definition: "a **copy** of the data is sent to the method. Changes inside the method do **not** affect the original variable. **Parameter passing by reference** — a **reference (address)** to the original data is sent. Changes inside the method **do** affect the original data."
+  definition: "a copy of the data is sent to the method. Changes inside the method do not affect the original variable. Parameter passing by reference — a reference (address) to the original data is sent. Changes inside the method do affect the original data."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
@@ -1042,6 +1202,16 @@
   definition: "any information that can be used to identify a living individual, such as name, address, date of birth, email address, medical records, or financial details."
   level: "GCSE"
   source: "/gcse/unit1/security-data-management/"
+
+- term: "Phishing"
+  definition: "a social engineering attack where fraudulent emails or messages that appear to be from a trusted source trick users into revealing passwords, financial details, or clicking malicious links."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
+- term: "Pixel"
+  definition: "the smallest addressable element of a bitmap image. Each pixel stores a binary value representing its colour. The number of bits per pixel determines the range of colours available (colour depth)."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
 
 - term: "Polling"
   definition: "is a technique where the CPU repeatedly checks (polls) each I/O device in turn to see if it needs attention or has data ready."
@@ -1074,7 +1244,7 @@
   source: "/a2/unit4/databases-distributed/"
 
 - term: "primary key"
-  definition: "uniquely identifies each record. A **foreign key** is a field in one table that references the primary key of another table. A **composite key** is a primary key made up of two or more fields."
+  definition: "uniquely identifies each record. A foreign key is a field in one table that references the primary key of another table. A composite key is a primary key made up of two or more fields."
   level: "AS"
   source: "/as/unit1/database-systems/"
 
@@ -1093,8 +1263,8 @@
   level: "AS"
   source: "/as/unit1/data-representation/"
 
-- term: "Private** properties enforce **data hiding"
-  definition: "other classes cannot directly change the data, which protects it from accidental modification. This is a key part of **encapsulation**."
+- term: "Private access modifier"
+  definition: "private properties enforce data hiding by preventing direct access from outside the class. Access is only possible through public methods (getters and setters), which can include validation logic."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
 
@@ -1104,12 +1274,12 @@
   source: "/a2/unit3/principles-programming/"
 
 - term: "process"
-  definition: "is a program in execution. The three main process states are **Ready**, **Running**, and **Blocked (Waiting)**."
+  definition: "is a program in execution. The three main process states are Ready, Running, and Blocked (Waiting)."
   level: "AS"
   source: "/as/unit1/operating-system/"
 
 - term: "Process scheduling"
-  definition: "is the method by which the OS determines the order in which processes receive CPU time. The **scheduler** selects a process from the ready queue to move to the running state."
+  definition: "is the method by which the OS determines the order in which processes receive CPU time. The scheduler selects a process from the ready queue to move to the running state."
   level: "AS"
   source: "/as/unit1/operating-system/"
 
@@ -1117,6 +1287,11 @@
   definition: "is a fundamental style or approach to programming that defines how we structure and organise code to solve problems."
   level: "AS"
   source: "/as/unit1/principles-programming/"
+
+- term: "Proprietary software"
+  definition: "software where the source code is not made available to users. It is owned by an individual or company, and users must purchase a licence to use it. Modification and redistribution are restricted."
+  level: "AS"
+  source: "/as/unit1/choosing-software/"
 
 - term: "protocol"
   definition: "is a standardised set of rules governing the format, timing, and error handling of data communication between devices on a network."
@@ -1129,7 +1304,7 @@
   source: "/gcse/unit1/communication/"
 
 - term: "Prototyping"
-  definition: "involves building a preliminary version (a **prototype**) of the system to explore requirements, test ideas, and gather user feedback before building the final product."
+  definition: "involves building a preliminary version (a prototype) of the system to explore requirements, test ideas, and gather user feedback before building the final product."
   level: "AS"
   source: "/as/unit1/systems-analysis/"
 
@@ -1144,12 +1319,12 @@
   source: "/a2/unit3/data-structures/"
 
 - term: "queue"
-  definition: "is a FIFO data structure. Items are added at the **rear** and removed from the **front**. A **front pointer** tracks the first item and a **rear pointer** tracks the last item."
+  definition: "is a FIFO data structure. Items are added at the rear and removed from the front. A front pointer tracks the first item and a rear pointer tracks the last item."
   level: "AS"
   source: "/as/unit1/data-structures/"
 
 - term: "Quick sort"
-  definition: "- a divide-and-conquer sorting algorithm that selects a **pivot** element, partitions the list into elements less than the pivot and elements greater than the pivot, then recursively sorts the two partitions. Average time complexity is **O(n log n)** but worst case is **O(n^2)**."
+  definition: "- a divide-and-conquer sorting algorithm that selects a pivot element, partitions the list into elements less than the pivot and elements greater than the pivot, then recursively sorts the two partitions. Average time complexity is O(n log n) but worst case is O(n^2)."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
@@ -1158,10 +1333,20 @@
   level: "AS"
   source: "/as/unit1/systems-analysis/"
 
+- term: "RAM (Random Access Memory)"
+  definition: "volatile memory that temporarily stores data and instructions currently in use by the CPU. Its contents are lost when power is removed. RAM can be read from and written to."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
+
 - term: "Random (direct) access"
   definition: "allows any record to be accessed directly by calculating its storage address from the key field, typically using a hash function."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
+
+- term: "Ransomware"
+  definition: "a type of malware that encrypts a victim's files or locks them out of their system, then demands a payment (ransom) in exchange for restoring access."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
 
 - term: "Real-Time Processing"
   definition: "- Data is processed immediately as it is received, with results produced fast enough to influence the current process or environment."
@@ -1169,12 +1354,12 @@
   source: "/as/unit2/analysis-design/"
 
 - term: "record"
-  definition: "is a collection of related fields that represent a single entity (e.g. one customer). A **field** is a single data item within a record (e.g. surname). A **key field** uniquely identifies each record."
+  definition: "is a collection of related fields that represent a single entity (e.g. one customer). A field is a single data item within a record (e.g. surname). A key field uniquely identifies each record."
   level: "A2"
   source: "/a2/unit4/organisation-data/"
 
 - term: "record"
-  definition: "is a data structure that stores a collection of related fields, each of which can be a different data type. Each field is accessed by its **field name** rather than an index."
+  definition: "is a data structure that stores a collection of related fields, each of which can be a different data type. Each field is accessed by its field name rather than an index."
   level: "AS"
   source: "/as/unit1/data-structures/"
 
@@ -1184,12 +1369,12 @@
   source: "/gcse/unit2/data-structures-types/"
 
 - term: "Recursion"
-  definition: "- a technique in which a function (or procedure) calls itself in order to solve a problem. Every recursive solution must have a **base case** (a condition that stops the recursion) and a **recursive case** (where the function calls itself with a smaller or simpler input)."
+  definition: "- a technique in which a function (or procedure) calls itself in order to solve a problem. Every recursive solution must have a base case (a condition that stops the recursion) and a recursive case (where the function calls itself with a smaller or simpler input)."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "Recursion"
-  definition: "is a technique where a function calls itself to solve a smaller instance of the same problem. Each recursive call works towards a **base case** that stops the recursion. **Iteration** uses loops (for, while) to repeat a block of code."
+  definition: "is a technique where a function calls itself to solve a smaller instance of the same problem. Each recursive call works towards a base case that stops the recursion. Iteration uses loops (for, while) to repeat a block of code."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
 
@@ -1197,6 +1382,11 @@
   definition: "- The process of restructuring existing code without changing its external behaviour. The goal is to improve readability, reduce duplication, and make the code easier to maintain."
   level: "AS"
   source: "/as/unit2/code-quality/"
+
+- term: "Register"
+  definition: "a tiny, extremely fast storage location inside the CPU used to hold data, instructions, or addresses currently being processed. Key registers include the accumulator, program counter, and memory address register."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
 
 - term: "Relationship"
   definition: "- A link or association between two entities (e.g. a Student *enrols on* a Course). Relationships are drawn as lines connecting entities, with a diamond or label on the line."
@@ -1208,13 +1398,18 @@
   level: "AS"
   source: "/as/unit1/systems-analysis/"
 
+- term: "Resolution"
+  definition: "the number of pixels in an image, typically expressed as width × height (e.g. 1920×1080). Higher resolution means more pixels and greater detail, but also a larger file size."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
+
 - term: "Reverse Polish Notation (RPN)"
-  definition: "- also called **postfix notation** -- is a way of writing arithmetic expressions where the operator comes **after** its operands. For example, the infix expression `3 + 4` is written as `3 4 +` in RPN. It eliminates the need for brackets and operator precedence rules."
+  definition: "- also called postfix notation -- is a way of writing arithmetic expressions where the operator comes after its operands. For example, the infix expression `3 + 4` is written as `3 4 +` in RPN. It eliminates the need for brackets and operator precedence rules."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
 
 - term: "RISC"
-  definition: "uses many simple instructions that each execute in one clock cycle. **CISC** uses fewer, more powerful instructions that may take several cycles each. RISC is more power-efficient; CISC can do more per instruction."
+  definition: "uses many simple instructions that each execute in one clock cycle. CISC uses fewer, more powerful instructions that may take several cycles each. RISC is more power-efficient; CISC can do more per instruction."
   level: "GCSE"
   source: "/gcse/unit1/hardware/"
 
@@ -1224,7 +1419,7 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "rogue value"
-  definition: "(also called a **sentinel value**) is a special value entered by the user to signal the end of data input. It must be a value that could **never be valid data** in the context of the program."
+  definition: "(also called a sentinel value) is a special value entered by the user to signal the end of data input. It must be a value that could never be valid data in the context of the program."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -1233,15 +1428,25 @@
   level: "GCSE"
   source: "/gcse/unit2/algorithms-and-constructs/"
 
+- term: "ROM (Read-Only Memory)"
+  definition: "non-volatile memory that permanently stores data, typically containing the boot-up instructions (BIOS/firmware). Its contents are not lost when power is removed and cannot normally be modified."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
+
 - term: "Rounding"
   definition: "adjusts the value to the nearest representable number. If the discarded portion is greater than or equal to half the value of the last retained bit, the last retained bit is rounded up."
   level: "A2"
   source: "/a2/unit4/data-representation/"
 
 - term: "Routing"
-  definition: "is the process of selecting the optimal path for packets across a network. Routers use **routing tables** to determine the next hop for each packet based on its destination IP address."
+  definition: "is the process of selecting the optimal path for packets across a network. Routers use routing tables to determine the next hop for each packet based on its destination IP address."
   level: "AS"
   source: "/as/unit1/data-transmission/"
+
+- term: "Sample rate"
+  definition: "the number of audio samples captured per second when digitising sound, measured in Hertz (Hz). A higher sample rate captures more detail and produces better quality audio but increases file size."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
 
 - term: "Sampling"
   definition: "the process of measuring an analogue sound wave at regular intervals and converting each measurement into a digital value. Higher sample rate and bit depth produce better quality but larger files."
@@ -1254,7 +1459,7 @@
   source: "/gcse/unit2/data-structures-types/"
 
 - term: "Second Normal Form (2NF):"
-  definition: "A relation is in 2NF if it is in 1NF and every non-key attribute is **fully functionally dependent** on the **whole** primary key (no partial dependencies)."
+  definition: "A relation is in 2NF if it is in 1NF and every non-key attribute is fully functionally dependent on the whole primary key (no partial dependencies)."
   level: "A2"
   source: "/a2/unit4/databases-distributed/"
 
@@ -1294,7 +1499,7 @@
   source: "/gcse/unit2/algorithms-and-constructs/"
 
 - term: "sequential file"
-  definition: "stores records in order of a **key field**. Searching can be more efficient than serial because the search can stop once the key value has been passed."
+  definition: "stores records in order of a key field. Searching can be more efficient than serial because the search can stop once the key value has been passed."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
 
@@ -1302,6 +1507,11 @@
   definition: "stores records in the order they were entered, with no sorting or logical ordering applied."
   level: "AS"
   source: "/as/unit1/organisation-of-data/"
+
+- term: "Server"
+  definition: "a computer or program that provides services, data, or resources to other computers (clients) over a network. Servers can host websites, manage files, handle email, or run databases."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
 
 - term: "Shunting yard algorithm"
   definition: "- an algorithm invented by Edsger Dijkstra that converts infix expressions to postfix (or prefix) notation using a stack. It processes tokens left to right, using the stack to hold operators temporarily while respecting precedence and associativity."
@@ -1314,12 +1524,12 @@
   source: "/a2/unit4/data-representation/"
 
 - term: "Sign and magnitude"
-  definition: "a method of representing signed binary where the MSB indicates the sign (0 = positive, 1 = negative) and the remaining bits represent the value. **Two's complement** — the standard method used by computers to represent signed integers; negative numbers are formed by flipping all bits and adding 1."
+  definition: "a method of representing signed binary where the MSB indicates the sign (0 = positive, 1 = negative) and the remaining bits represent the value. Two's complement — the standard method used by computers to represent signed integers; negative numbers are formed by flipping all bits and adding 1."
   level: "GCSE"
   source: "/gcse/unit1/data-organisation/"
 
 - term: "Simplex"
-  definition: "allows one-way communication only. **Half duplex** allows two-way communication but only one direction at a time. **Full duplex** allows simultaneous two-way communication."
+  definition: "allows one-way communication only. Half duplex allows two-way communication but only one direction at a time. Full duplex allows simultaneous two-way communication."
   level: "AS"
   source: "/as/unit1/data-transmission/"
 
@@ -1334,7 +1544,7 @@
   source: "/as/unit1/software-maintenance/"
 
 - term: "Software maintenance types"
-  definition: "The three types of software maintenance are: **Corrective** (fixing bugs), **Adaptive** (adapting to environmental changes), and **Perfective** (improving or enhancing the software). In exam scenarios, identify the trigger to determine the type."
+  definition: "The three types of software maintenance are: Corrective (fixing bugs), Adaptive (adapting to environmental changes), and Perfective (improving or enhancing the software). In exam scenarios, identify the trigger to determine the type."
   level: "AS"
   source: "/as/unit1/software-maintenance/"
 
@@ -1344,14 +1554,39 @@
   source: "/as/unit1/ethical-legal-issues/"
 
 - term: "Source code"
-  definition: "the original program written by the programmer in a high-level or assembly language. **Object code** (or machine code) — the translated binary version that the CPU can execute directly."
+  definition: "the original program written by the programmer in a high-level or assembly language. Object code (or machine code) — the translated binary version that the CPU can execute directly."
   level: "GCSE"
   source: "/gcse/unit1/program-construction/"
 
 - term: "Space complexity"
-  definition: "- a measure of how much additional memory an algorithm requires relative to the input size. Like time complexity, it is expressed using Big O notation. It typically measures **auxiliary space** (extra space beyond the input itself)."
+  definition: "- a measure of how much additional memory an algorithm requires relative to the input size. Like time complexity, it is expressed using Big O notation. It typically measures auxiliary space (extra space beyond the input itself)."
   level: "A2"
   source: "/a2/unit3/algorithms-programs/"
+
+- term: "Spear phishing"
+  definition: "a targeted phishing attack aimed at a specific individual or organisation, using personal details to appear more convincing and harder to detect than generic phishing."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
+- term: "Spyware"
+  definition: "a type of malware that secretly monitors user activity and collects personal information such as browsing habits, login credentials, and keystrokes, then sends this data to a third party."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
+- term: "SQL (Structured Query Language)"
+  definition: "a standard language used to create, read, update, and delete data in a relational database. Common commands include SELECT, INSERT, UPDATE, DELETE, and CREATE TABLE."
+  level: "AS"
+  source: "/as/unit1/database-systems/"
+
+- term: "SQL injection"
+  definition: "an attack where malicious SQL code is inserted into a web form or URL input field, allowing the attacker to access, modify, or delete data in the underlying database."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
+- term: "SSD (Solid State Drive)"
+  definition: "a secondary storage device that uses flash memory (NAND chips) with no moving parts. SSDs are faster, more durable, and quieter than HDDs, but typically cost more per gigabyte."
+  level: "GCSE"
+  source: "/gcse/unit1/hardware/"
 
 - term: "stable"
   definition: "sorting algorithm preserves the relative order of elements with equal keys. All three algorithms covered here (bubble, insertion, merge) are stable."
@@ -1364,7 +1599,7 @@
   source: "/a2/unit3/data-structures/"
 
 - term: "stack"
-  definition: "is a LIFO data structure where items are added (pushed) and removed (popped) from the **top** only. A **stack pointer** keeps track of the position of the top element."
+  definition: "is a LIFO data structure where items are added (pushed) and removed (popped) from the top only. A stack pointer keeps track of the position of the top element."
   level: "AS"
   source: "/as/unit1/data-structures/"
 
@@ -1384,17 +1619,17 @@
   source: "/as/unit1/software-design/"
 
 - term: "subroutine"
-  definition: "is a named block of code that performs a specific task. Subroutines include both **functions** (which return a value) and **procedures** (which do not return a value). Using subroutines is fundamental to writing structured, modular programs."
+  definition: "is a named block of code that performs a specific task. Subroutines include both functions (which return a value) and procedures (which do not return a value). Using subroutines is fundamental to writing structured, modular programs."
   level: "AS"
   source: "/as/unit1/program-design/"
 
 - term: "Subroutine"
-  definition: "- A named block of code that performs a specific task. Subroutines are either **procedures** (which do not return a value) or **functions** (which return a value)."
+  definition: "- A named block of code that performs a specific task. Subroutines are either procedures (which do not return a value) or functions (which return a value)."
   level: "AS"
   source: "/as/unit2/programming-skills/"
 
 - term: "Subroutine"
-  definition: "a named block of code that performs a specific task and can be called from anywhere in the program. There are two types: **procedures** and **functions**."
+  definition: "a named block of code that performs a specific task and can be called from anywhere in the program. There are two types: procedures and functions."
   level: "GCSE"
   source: "/gcse/unit1/program-construction/"
 
@@ -1424,7 +1659,7 @@
   source: "/a2/unit3/principles-programming/"
 
 - term: "Syntax error"
-  definition: "code breaks the language's grammar rules and will not run. **Logic error** — code runs but produces the wrong output. **Runtime error** — code compiles but crashes during execution due to an unexpected condition."
+  definition: "code breaks the language's grammar rules and will not run. Logic error — code runs but produces the wrong output. Runtime error — code compiles but crashes during execution due to an unexpected condition."
   level: "GCSE"
   source: "/gcse/unit1/program-construction/"
 
@@ -1434,9 +1669,14 @@
   source: "/as/unit1/systems-analysis/"
 
 - term: "Tag"
-  definition: "an HTML keyword surrounded by angle brackets, e.g. `<p>`. Most tags come in pairs: an **opening tag** (`<p>`) and a **closing tag** (`</p>`)."
+  definition: "an HTML keyword surrounded by angle brackets, e.g. `<p>`. Most tags come in pairs: an opening tag (`<p>`) and a closing tag (`</p>`)."
   level: "GCSE"
   source: "/gcse/unit2/programming-languages/"
+
+- term: "TCP (Transmission Control Protocol)"
+  definition: "a connection-oriented transport layer protocol that breaks data into segments, adds sequence numbers, and ensures reliable, ordered delivery by requesting retransmission of lost or corrupted packets."
+  level: "AS"
+  source: "/as/unit1/data-transmission/"
 
 - term: "Technical documentation"
   definition: "is aimed at IT professionals and programmers. It describes the internal structure, design, and implementation of the software to support future maintenance and development."
@@ -1444,7 +1684,7 @@
   source: "/as/unit1/software-maintenance/"
 
 - term: "test plan"
-  definition: "outlines the testing strategy and contains a **test table** that specifies each individual test case, including the test data, expected results, and actual results."
+  definition: "outlines the testing strategy and contains a test table that specifies each individual test case, including the test data, expected results, and actual results."
   level: "AS"
   source: "/as/unit1/software-testing/"
 
@@ -1463,23 +1703,23 @@
   level: "GCSE"
   source: "/gcse/unit1/ethical-legal-environmental/"
 
-- term: "Third Normal Form (3NF):** A relation is in 3NF if it is in 2NF and there are no **transitive dependencies"
-  definition: "no non-key attribute depends on another non-key attribute."
+- term: "Third Normal Form (3NF)"
+  definition: "a relation is in 3NF if it is in 2NF and there are no transitive dependencies — every non-key attribute depends directly on the primary key, not on another non-key attribute."
   level: "A2"
   source: "/a2/unit4/databases-distributed/"
 
 - term: "thread"
-  definition: "is the smallest unit of processing that can be scheduled by the OS. A single process can contain **multiple threads** that share the same memory space but execute independently."
+  definition: "is the smallest unit of processing that can be scheduled by the OS. A single process can contain multiple threads that share the same memory space but execute independently."
   level: "AS"
   source: "/as/unit1/operating-system/"
 
 - term: "Top-down design"
-  definition: "is a problem-solving approach where a complex problem is broken down into a series of smaller, more manageable sub-problems. Each sub-problem is then further broken down until each part is simple enough to be solved directly. This repeated decomposition is called **stepwise refinement**."
+  definition: "is a problem-solving approach where a complex problem is broken down into a series of smaller, more manageable sub-problems. Each sub-problem is then further broken down until each part is simple enough to be solved directly. This repeated decomposition is called stepwise refinement."
   level: "AS"
   source: "/as/unit1/software-design/"
 
 - term: "trace table"
-  definition: "is a technique used to **dry-run** an algorithm by recording the values of variables at each step of execution. It is used to check the correctness of an algorithm and to understand its behaviour."
+  definition: "is a technique used to dry-run an algorithm by recording the values of variables at each step of execution. It is used to check the correctness of an algorithm and to understand its behaviour."
   level: "AS"
   source: "/as/unit1/algorithms-programs/"
 
@@ -1489,14 +1729,19 @@
   source: "/as/unit1/organisation-of-data/"
 
 - term: "translation program"
-  definition: "takes source code as input and produces executable code (or an intermediate form) as output. The three types are **compilers**, **interpreters**, and **assemblers**."
+  definition: "takes source code as input and produces executable code (or an intermediate form) as output. The three types are compilers, interpreters, and assemblers."
   level: "A2"
   source: "/a2/unit3/program-construction/"
 
 - term: "tree"
-  definition: "is a hierarchical data structure with a **root** node at the top. Each node may have child nodes. A **binary tree** is a tree where each node has **at most two children** — a left child and a right child."
+  definition: "is a hierarchical data structure with a root node at the top. Each node may have child nodes. A binary tree is a tree where each node has at most two children — a left child and a right child."
   level: "AS"
   source: "/as/unit1/data-structures/"
+
+- term: "Trojan"
+  definition: "a type of malware that disguises itself as legitimate software to trick users into installing it. Unlike viruses, Trojans do not self-replicate but can create backdoors, steal data, or install other malware."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
 
 - term: "Truncation"
   definition: "simply removes (discards) the excess bits beyond the available precision. The remaining bits are left unchanged. This always rounds towards zero."
@@ -1504,7 +1749,7 @@
   source: "/a2/unit4/data-representation/"
 
 - term: "Truncation"
-  definition: "discards excess bits without adjustment, always introducing an error towards zero. **Rounding** adjusts the last retained bit based on the discarded bits, producing a closer approximation. Both introduce errors, but rounding is generally more accurate."
+  definition: "discards excess bits without adjustment, always introducing an error towards zero. Rounding adjusts the last retained bit based on the discarded bits, producing a closer approximation. Both introduce errors, but rounding is generally more accurate."
   level: "AS"
   source: "/as/unit1/data-representation/"
 
@@ -1533,6 +1778,11 @@
   level: "A2"
   source: "/a2/unit3/logical-operations/"
 
+- term: "URL (Uniform Resource Locator)"
+  definition: "a human-readable address used to identify a specific resource on the internet, such as a web page. It typically includes the protocol (e.g. https), domain name, and path."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
+
 - term: "user story"
   definition: "is a short, informal description of a feature written from the perspective of an end user. It follows the format: \"As a [type of user], I want [some feature] so that [some benefit].\""
   level: "A2"
@@ -1549,17 +1799,17 @@
   source: "/gcse/unit1/system-software/"
 
 - term: "Validation"
-  definition: "- The process of checking that data meets specified rules or criteria before it is accepted by the program. Validation checks that data is **reasonable and sensible**, but it cannot guarantee data is **correct**."
+  definition: "- The process of checking that data meets specified rules or criteria before it is accepted by the program. Validation checks that data is reasonable and sensible, but it cannot guarantee data is correct."
   level: "AS"
   source: "/as/unit2/programming-skills/"
 
 - term: "Validation"
-  definition: "an automatic check performed by a program to ensure that data entered is **reasonable and sensible** before it is processed. Validation does **not** check if data is correct — only that it is plausible."
+  definition: "an automatic check performed by a program to ensure that data entered is reasonable and sensible before it is processed. Validation does not check if data is correct — only that it is plausible."
   level: "GCSE"
   source: "/gcse/unit2/security-authentication/"
 
 - term: "variable"
-  definition: "is a named storage location in memory whose value can change during program execution. A **constant** is a named value that is set once and **cannot be changed** during execution."
+  definition: "is a named storage location in memory whose value can change during program execution. A constant is a named value that is set once and cannot be changed during execution."
   level: "AS"
   source: "/as/unit1/principles-programming/"
 
@@ -1573,13 +1823,18 @@
   level: "GCSE"
   source: "/gcse/unit2/data-structures-types/"
 
+- term: "Vector graphic"
+  definition: "an image stored as a collection of mathematical objects (lines, shapes, curves) defined by properties such as coordinates, radius, and fill colour. Vector images can be scaled without loss of quality."
+  level: "GCSE"
+  source: "/gcse/unit1/data-organisation/"
+
 - term: "Verification"
-  definition: "checks whether the software has been built correctly according to the specification (\"Are we building the product right?\"). **Validation** checks whether the software meets the actual needs of the user (\"Are we building the right product?\")."
+  definition: "checks whether the software has been built correctly according to the specification (\"Are we building the product right?\"). Validation checks whether the software meets the actual needs of the user (\"Are we building the right product?\")."
   level: "AS"
   source: "/as/unit1/software-testing/"
 
 - term: "Verification"
-  definition: "the process of checking that data has been accurately entered or transferred. Methods include **double entry** (entering data twice and comparing), **proofreading** (visually checking), and **check digits** (calculated values appended to data for error detection)."
+  definition: "the process of checking that data has been accurately entered or transferred. Methods include double entry (entering data twice and comparing), proofreading (visually checking), and check digits (calculated values appended to data for error detection)."
   level: "GCSE"
   source: "/gcse/unit2/security-authentication/"
 
@@ -1598,6 +1853,16 @@
   level: "GCSE"
   source: "/gcse/unit1/system-software/"
 
+- term: "Virtualisation"
+  definition: "the creation of a virtual (rather than physical) version of a computing resource, such as a server, operating system, or storage device. Virtual machines allow multiple OS instances to run on a single physical machine."
+  level: "AS"
+  source: "/as/unit1/operating-system/"
+
+- term: "Virus"
+  definition: "a type of malware that attaches itself to a legitimate program or file. It requires user action to spread (e.g. opening an infected file) and can corrupt data, slow performance, or damage the system."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
+
 - term: "Vocabulary dictation"
   definition: "systems convert continuous, natural speech into text. They must handle a large vocabulary, varied sentence structures, and connected words spoken at normal speed."
   level: "A2"
@@ -1609,12 +1874,12 @@
   source: "/a2/unit4/hardware-communication/"
 
 - term: "Volatile"
-  definition: "memory loses its contents when the power supply is removed. **Non-volatile** memory retains its contents without power."
+  definition: "memory loses its contents when the power supply is removed. Non-volatile memory retains its contents without power."
   level: "AS"
   source: "/as/unit1/hardware-communication/"
 
 - term: "Von Neumann Architecture"
-  definition: "stores both program instructions and data in the same memory space, accessed via a single shared bus. This creates the **Von Neumann bottleneck** where the CPU must wait for either data or instructions because only one can be fetched at a time."
+  definition: "stores both program instructions and data in the same memory space, accessed via a single shared bus. This creates the Von Neumann bottleneck where the CPU must wait for either data or instructions because only one can be fetched at a time."
   level: "A2"
   source: "/a2/unit4/hardware-communication/"
 
@@ -1622,6 +1887,11 @@
   definition: "a computer design where program instructions and data share the same memory and bus system. This means only one instruction or data item can be fetched at a time."
   level: "GCSE"
   source: "/gcse/unit1/hardware/"
+
+- term: "WAN (Wide Area Network)"
+  definition: "a network that spans a large geographical area, connecting multiple LANs across cities, countries, or continents. The internet is the largest WAN."
+  level: "GCSE"
+  source: "/gcse/unit1/communication/"
 
 - term: "Waterfall model"
   definition: "is a sequential, linear approach to software development where each stage must be completed before the next begins. Progress flows in one direction -- like a waterfall -- through a fixed sequence of stages."
@@ -1632,6 +1902,11 @@
   definition: "is a family of wireless networking protocols based on the IEEE 802.11 standards. Wi-Fi allows devices to connect to a local area network (LAN) wirelessly using radio waves."
   level: "A2"
   source: "/a2/unit4/hardware-communication/"
+
+- term: "Worm"
+  definition: "a type of malware that replicates itself and spreads automatically across networks without requiring user action. Worms consume bandwidth and system resources, and can carry malicious payloads."
+  level: "GCSE"
+  source: "/gcse/unit1/security-data-management/"
 
 - term: "XOR cipher"
   definition: "- a simple symmetric encryption technique where each bit (or byte) of plaintext is XORed with the corresponding bit (or byte) of a key. Applying the same XOR operation a second time with the same key recovers the original plaintext."
