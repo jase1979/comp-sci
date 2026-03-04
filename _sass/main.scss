@@ -642,22 +642,18 @@ a:hover { color: var(--accent-hover); }
       border-radius: 10px;
       padding: 1rem 1.2rem;
       margin: 0.8rem 0;
-      position: relative;
+      strong {
+        color: var(--accent);
 
-      strong { color: var(--accent); }
+        .key-term-link {
+          color: inherit;
+          text-decoration: none;
+          border-bottom: 1px dashed var(--border);
+          transition: border-color 0.2s;
 
-      .key-term-glossary-link {
-        position: absolute;
-        top: 0.6rem;
-        right: 0.8rem;
-        font-size: 0.7rem;
-        color: var(--text-muted);
-        opacity: 0.6;
-        transition: opacity 0.2s, color 0.2s;
-
-        &:hover {
-          opacity: 1;
-          color: var(--accent);
+          &:hover {
+            border-bottom-color: var(--accent);
+          }
         }
       }
     }

@@ -99,7 +99,7 @@
     });
   </script>
   <script>
-    // Add "Glossary ↗" links to key-term boxes on topic pages
+    // Link key-term bold text to glossary entries
     document.querySelectorAll('.key-term').forEach(function(el) {
       var bold = el.querySelector('strong');
       if (!bold) return;
@@ -107,9 +107,10 @@
       var slug = term.toLowerCase().replace(/[()]/g, '').replace(/[\/\s]+/g, '-');
       var link = document.createElement('a');
       link.href = '{{ "/glossary/" | relative_url }}#term-' + slug;
-      link.className = 'key-term-glossary-link';
-      link.textContent = 'Glossary \u2197';
-      el.appendChild(link);
+      link.className = 'key-term-link';
+      link.innerHTML = bold.innerHTML;
+      bold.innerHTML = '';
+      bold.appendChild(link);
     });
   </script>
 </body>
