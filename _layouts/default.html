@@ -99,6 +99,13 @@
     });
   </script>
   <script>
+    // Glossary definitions for tooltips
+    var glossaryDefs = {
+      {% for entry in site.data.glossary %}
+        "{{ entry.term | downcase | replace: '(', '' | replace: ')', '' | replace: '/', '-' | replace: ' ', '-' }}": {{ entry.definition | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+
     // Link key-term bold text to glossary entries
     document.querySelectorAll('.key-term').forEach(function(el) {
       var bold = el.querySelector('strong');
@@ -108,6 +115,9 @@
       var link = document.createElement('a');
       link.href = '{{ "/glossary/" | relative_url }}#term-' + slug;
       link.className = 'key-term-link';
+      if (glossaryDefs[slug]) {
+        link.setAttribute('data-tooltip', glossaryDefs[slug]);
+      }
       link.innerHTML = bold.innerHTML;
       bold.innerHTML = '';
       bold.appendChild(link);

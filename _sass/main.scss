@@ -650,9 +650,36 @@ a:hover { color: var(--accent-hover); }
           text-decoration: none;
           border-bottom: 1px dashed var(--border);
           transition: border-color 0.2s;
+          position: relative;
 
           &:hover {
             border-bottom-color: var(--accent);
+          }
+
+          &[data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 0;
+            top: calc(100% + 6px);
+            z-index: 10;
+            max-width: 300px;
+            padding: 0.6rem 0.8rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: normal;
+            word-wrap: break-word;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s;
+          }
+
+          &[data-tooltip]:hover::after {
+            opacity: 1;
           }
         }
       }
