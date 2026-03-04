@@ -224,18 +224,27 @@ a:hover { color: var(--accent-hover); }
     display: grid;
     grid-template-columns: 220px 1fr;
     gap: 2rem;
-    align-items: start;
   }
 
   .toc {
-    position: sticky;
-    top: 5rem;
-    max-height: calc(100vh - 6rem);
-    overflow-y: auto;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem;
+    // Stretches to full grid row height so sticky inner wrapper works
+    min-width: 0;
+
+    .toc-sticky {
+      position: sticky;
+      top: 5rem;
+      max-height: calc(100vh - 6rem);
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+
+      // Scrollbar styling
+      &::-webkit-scrollbar { width: 4px; }
+      &::-webkit-scrollbar-track { background: transparent; }
+      &::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    }
 
     .toc-toggle {
       display: none;
@@ -273,11 +282,6 @@ a:hover { color: var(--accent-hover); }
         }
       }
     }
-
-    // Scrollbar styling
-    &::-webkit-scrollbar { width: 4px; }
-    &::-webkit-scrollbar-track { background: transparent; }
-    &::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
   }
 
   @media (max-width: 860px) {
@@ -286,12 +290,15 @@ a:hover { color: var(--accent-hover); }
     }
 
     .toc {
-      position: relative;
-      top: 0;
-      max-height: none;
       margin-bottom: 1.5rem;
-      padding: 0;
-      overflow: visible;
+
+      .toc-sticky {
+        position: relative;
+        top: 0;
+        max-height: none;
+        padding: 0;
+        overflow: visible;
+      }
 
       .toc-toggle {
         display: flex;

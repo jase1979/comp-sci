@@ -36,11 +36,13 @@ layout: default
   {% else %}
   <div class="topic-layout">
     <nav class="toc" id="toc">
-      <div class="toc-toggle" id="toc-toggle">
-        <span>On this page</span>
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="toc-sticky">
+        <div class="toc-toggle" id="toc-toggle">
+          <span>On this page</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <ul class="toc-list" id="toc-list"></ul>
       </div>
-      <ul class="toc-list" id="toc-list"></ul>
     </nav>
     <div class="topic-content">
       {{ content }}
