@@ -106,7 +106,7 @@
       var term = bold.textContent.trim();
       var slug = term.toLowerCase().replace(/[()]/g, '').replace(/[\/\s]+/g, '-');
       var link = document.createElement('a');
-      link.href = '/comp_sci/glossary/#term-' + slug;
+      link.href = '{{ "/glossary/" | relative_url }}#term-' + slug;
       link.className = 'key-term-glossary-link';
       link.textContent = 'Glossary \u2197';
       el.appendChild(link);
