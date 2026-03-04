@@ -642,8 +642,24 @@ a:hover { color: var(--accent-hover); }
       border-radius: 10px;
       padding: 1rem 1.2rem;
       margin: 0.8rem 0;
+      position: relative;
 
       strong { color: var(--accent); }
+
+      .key-term-glossary-link {
+        position: absolute;
+        top: 0.6rem;
+        right: 0.8rem;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        opacity: 0.6;
+        transition: opacity 0.2s, color 0.2s;
+
+        &:hover {
+          opacity: 1;
+          color: var(--accent);
+        }
+      }
     }
 
     .exam-tip {

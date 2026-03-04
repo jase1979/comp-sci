@@ -30,7 +30,8 @@ title: Glossary
         <div class="glossary-section" id="letter-{{ current_letter }}">
           <h2 class="glossary-letter">{{ current_letter }}</h2>
       {% endif %}
-      <div class="glossary-entry" data-term="{{ entry.term | downcase }}" data-definition="{{ entry.definition | downcase }}">
+      {% assign slug = entry.term | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' | replace: '/', '-' %}
+      <div class="glossary-entry" id="term-{{ slug }}" data-term="{{ entry.term | downcase }}" data-definition="{{ entry.definition | downcase }}">
         <div class="glossary-term-row">
           <strong class="glossary-term-name">{{ entry.term }}</strong>
           <span class="glossary-badge glossary-badge--{{ entry.level | downcase }}">{{ entry.level }}</span>
