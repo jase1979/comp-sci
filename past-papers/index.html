@@ -238,28 +238,43 @@ title: "Past Paper Questions"
   var filterType = document.getElementById('filter-type');
   var countEl = document.getElementById('pp-count');
 
-  // Populate filter dropdowns
-  var papers = new Set();
-  var topics = new Set();
-  cards.forEach(function(c) {
-    papers.add(c.dataset.level + '|' + c.dataset.year + '|' + c.dataset.paper);
-    topics.add(c.dataset.topic);
-  });
+  // Rebuild paper and topic dropdowns based on selected level
+  function populateDropdowns() {
+    var level = filterLevel.value;
+    var papers = new Set();
+    var topics = new Set();
+    cards.forEach(function(c) {
+      if (level !== 'all' && c.dataset.level !== level) return;
+      papers.add(c.dataset.level + '|' + c.dataset.year + '|' + c.dataset.paper);
+      topics.add(c.dataset.topic);
+    });
 
-  Array.from(papers).sort().reverse().forEach(function(p) {
-    var parts = p.split('|');
-    var opt = document.createElement('option');
-    opt.value = parts[2];
-    opt.textContent = parts[0].toUpperCase() + ' ' + parts[1] + ' — ' + parts[2];
-    filterPaper.appendChild(opt);
-  });
+    var prevPaper = filterPaper.value;
+    var prevTopic = filterTopic.value;
+    filterPaper.innerHTML = '<option value="all">All papers</option>';
+    filterTopic.innerHTML = '<option value="all">All topics</option>';
 
-  Array.from(topics).sort().forEach(function(t) {
-    var opt = document.createElement('option');
-    opt.value = t;
-    opt.textContent = t.replace(/-/g, ' ');
-    filterTopic.appendChild(opt);
-  });
+    Array.from(papers).sort().reverse().forEach(function(p) {
+      var parts = p.split('|');
+      var opt = document.createElement('option');
+      opt.value = parts[2];
+      opt.textContent = parts[0].toUpperCase() + ' ' + parts[1] + ' — ' + parts[2];
+      filterPaper.appendChild(opt);
+    });
+
+    Array.from(topics).sort().forEach(function(t) {
+      var opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t.replace(/-/g, ' ');
+      filterTopic.appendChild(opt);
+    });
+
+    // Restore previous selection if still valid, otherwise reset
+    filterPaper.value = filterPaper.querySelector('option[value="' + prevPaper + '"]') ? prevPaper : 'all';
+    filterTopic.value = filterTopic.querySelector('option[value="' + prevTopic + '"]') ? prevTopic : 'all';
+  }
+
+  populateDropdowns();
 
   function applyFilters() {
     var level = filterLevel.value;
@@ -289,7 +304,7 @@ title: "Past Paper Questions"
     countEl.textContent = shown + ' question' + (shown !== 1 ? 's' : '');
   }
 
-  filterLevel.addEventListener('change', applyFilters);
+  filterLevel.addEventListener('change', function() { populateDropdowns(); applyFilters(); });
   filterPaper.addEventListener('change', applyFilters);
   filterTopic.addEventListener('change', applyFilters);
   filterMarks.addEventListener('change', applyFilters);
